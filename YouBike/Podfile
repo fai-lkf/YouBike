@@ -1,0 +1,25 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'YouBike' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # RxCore
+  pod 'RxSwift' 
+  pod 'RxCocoa'
+  pod 'RxOptional'
+  pod 'RxGesture'
+  pod 'RxDataSources'
+
+  # Network
+  pod 'Moya/RxSwift', '14.0.0-alpha.2'
+  pod 'AlamofireImage', '4.0.0-beta.3'
+
+  # UI
+  pod 'SnapKit'
+
+  # Utility
+  pod 'Then'
+
+end

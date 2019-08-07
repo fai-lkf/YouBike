@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D0E22F9BF4E0055848C /* RxStatus.swift */; };
+		9C787D1222F9C4FF0055848C /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1122F9C4FF0055848C /* BaseVC.swift */; };
+		9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */; };
+		9C787D1722F9CA1B0055848C /* MoyaX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1622F9CA1B0055848C /* MoyaX.swift */; };
+		9C787D1A22F9CB440055848C /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1922F9CB440055848C /* LocationResponse.swift */; };
+		9C787D1C22F9CE0A0055848C /* BikeParkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1B22F9CE0A0055848C /* BikeParkVM.swift */; };
+		9C787D2122F9D43C0055848C /* BikeParkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1F22F9D43C0055848C /* BikeParkVC.swift */; };
+		9C787D2222F9D43C0055848C /* BikeParkVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C787D2022F9D43C0055848C /* BikeParkVC.xib */; };
+		9CC9DB7E22F9D5B200647BC5 /* UIX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7D22F9D5B200647BC5 /* UIX.swift */; };
+		9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7F22F9D62700647BC5 /* CommonX.swift */; };
+		9CC9DB8222FAFA7D00647BC5 /* SequenceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8122FAFA7D00647BC5 /* SequenceX.swift */; };
+		9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8322FAFD7A00647BC5 /* BikeParkCell.swift */; };
+		9CC9DB8622FAFD7A00647BC5 /* BikeParkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8422FAFD7A00647BC5 /* BikeParkCell.xib */; };
+		9CC9DB8922FAFE8C00647BC5 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8822FAFE8C00647BC5 /* BaseCell.swift */; };
+		9CC9DB8B22FB057B00647BC5 /* CoreX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8A22FB057B00647BC5 /* CoreX.swift */; };
+		9CC9DB8D22FB093000647BC5 /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8C22FB093000647BC5 /* BaseNC.swift */; };
+		9CC9DB8F22FB102A00647BC5 /* BaseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8E22FB102A00647BC5 /* BaseTable.swift */; };
+		9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */; };
+		9CC9DB9322FB173200647BC5 /* UDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB9222FB173200647BC5 /* UDKey.swift */; };
+		9CEAA8AF22FB23D7004EF7CA /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */; };
+		9CECFB8022F850A2001C87E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */; };
+		9CECFB8522F850A2001C87E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8322F850A2001C87E7 /* Main.storyboard */; };
+		9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8622F850A3001C87E7 /* Assets.xcassets */; };
+		9CECFB8A22F850A3001C87E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8822F850A3001C87E7 /* LaunchScreen.storyboard */; };
+		9CECFB9C22F87BD3001C87E7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */; };
+		A10CBD2901402D82BE74E800 /* Pods_YouBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.release.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.release.xcconfig"; sourceTree = "<group>"; };
+		9C787D0E22F9BF4E0055848C /* RxStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxStatus.swift; sourceTree = "<group>"; };
+		9C787D1122F9C4FF0055848C /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeLocationAPI.swift; sourceTree = "<group>"; };
+		9C787D1622F9CA1B0055848C /* MoyaX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaX.swift; sourceTree = "<group>"; };
+		9C787D1922F9CB440055848C /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		9C787D1B22F9CE0A0055848C /* BikeParkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeParkVM.swift; sourceTree = "<group>"; };
+		9C787D1F22F9D43C0055848C /* BikeParkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeParkVC.swift; sourceTree = "<group>"; };
+		9C787D2022F9D43C0055848C /* BikeParkVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BikeParkVC.xib; sourceTree = "<group>"; };
+		9CC9DB7D22F9D5B200647BC5 /* UIX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIX.swift; sourceTree = "<group>"; };
+		9CC9DB7F22F9D62700647BC5 /* CommonX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonX.swift; sourceTree = "<group>"; };
+		9CC9DB8122FAFA7D00647BC5 /* SequenceX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceX.swift; sourceTree = "<group>"; };
+		9CC9DB8322FAFD7A00647BC5 /* BikeParkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeParkCell.swift; sourceTree = "<group>"; };
+		9CC9DB8422FAFD7A00647BC5 /* BikeParkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BikeParkCell.xib; sourceTree = "<group>"; };
+		9CC9DB8822FAFE8C00647BC5 /* BaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
+		9CC9DB8A22FB057B00647BC5 /* CoreX.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreX.swift; sourceTree = "<group>"; };
+		9CC9DB8C22FB093000647BC5 /* BaseNC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNC.swift; sourceTree = "<group>"; };
+		9CC9DB8E22FB102A00647BC5 /* BaseTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTable.swift; sourceTree = "<group>"; };
+		9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkBookmarkVM.swift; sourceTree = "<group>"; };
+		9CC9DB9222FB173200647BC5 /* UDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDKey.swift; sourceTree = "<group>"; };
+		9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		9CECFB7C22F850A2001C87E7 /* YouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9CECFB8422F850A2001C87E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CECFB8622F850A3001C87E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CECFB8922F850A3001C87E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CECFB8B22F850A3001C87E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.debug.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9CECFB7922F850A2001C87E7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10CBD2901402D82BE74E800 /* Pods_YouBike.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90EDF852F20FE47FA0BCFC86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C787D1022F9C4F60055848C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CC9DB8722FAFE7800647BC5 /* Base */,
+				9C787D1D22F9D4020055848C /* Park */,
+				9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C787D1322F9C8C60055848C /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */,
+				9C787D1622F9CA1B0055848C /* MoyaX.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9C787D1822F9CB330055848C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D1922F9CB440055848C /* LocationResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C787D1D22F9D4020055848C /* Park */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D1F22F9D43C0055848C /* BikeParkVC.swift */,
+				9C787D2022F9D43C0055848C /* BikeParkVC.xib */,
+				9CC9DB8322FAFD7A00647BC5 /* BikeParkCell.swift */,
+				9CC9DB8422FAFD7A00647BC5 /* BikeParkCell.xib */,
+			);
+			path = Park;
+			sourceTree = "<group>";
+		};
+		9CC9DB7C22F9D5A700647BC5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9CC9DB7D22F9D5B200647BC5 /* UIX.swift */,
+				9CC9DB7F22F9D62700647BC5 /* CommonX.swift */,
+				9CC9DB8122FAFA7D00647BC5 /* SequenceX.swift */,
+				9CC9DB8A22FB057B00647BC5 /* CoreX.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		9CC9DB8722FAFE7800647BC5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D1122F9C4FF0055848C /* BaseVC.swift */,
+				9CC9DB8822FAFE8C00647BC5 /* BaseCell.swift */,
+				9CC9DB8C22FB093000647BC5 /* BaseNC.swift */,
+				9CC9DB8E22FB102A00647BC5 /* BaseTable.swift */,
+				9CC9DB9222FB173200647BC5 /* UDKey.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		9CECFB7322F850A2001C87E7 = {
+			isa = PBXGroup;
+			children = (
+				9CECFB7E22F850A2001C87E7 /* YouBike */,
+				9CECFB7D22F850A2001C87E7 /* Products */,
+				EE57E302A06324679EC459CF /* Pods */,
+				90EDF852F20FE47FA0BCFC86 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9CECFB7D22F850A2001C87E7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9CECFB7C22F850A2001C87E7 /* YouBike.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9CECFB7E22F850A2001C87E7 /* YouBike */ = {
+			isa = PBXGroup;
+			children = (
+				9CC9DB7C22F9D5A700647BC5 /* Extension */,
+				9C787D1822F9CB330055848C /* Model */,
+				9C787D1322F9C8C60055848C /* API */,
+				9C787D1022F9C4F60055848C /* View */,
+				9CECFB9A22F87BC6001C87E7 /* ViewModel */,
+				9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */,
+				9CECFB8322F850A2001C87E7 /* Main.storyboard */,
+				9CECFB8622F850A3001C87E7 /* Assets.xcassets */,
+				9CECFB8822F850A3001C87E7 /* LaunchScreen.storyboard */,
+				9CECFB8B22F850A3001C87E7 /* Info.plist */,
+			);
+			path = YouBike;
+			sourceTree = "<group>";
+		};
+		9CECFB9A22F87BC6001C87E7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D0E22F9BF4E0055848C /* RxStatus.swift */,
+				9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */,
+				9C787D1B22F9CE0A0055848C /* BikeParkVM.swift */,
+				9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EE57E302A06324679EC459CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */,
+				75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9CECFB7B22F850A2001C87E7 /* YouBike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9CECFB8E22F850A3001C87E7 /* Build configuration list for PBXNativeTarget "YouBike" */;
+			buildPhases = (
+				9ED703F1E6AA352B64EFB547 /* [CP] Check Pods Manifest.lock */,
+				9CECFB7822F850A2001C87E7 /* Sources */,
+				9CECFB7922F850A2001C87E7 /* Frameworks */,
+				9CECFB7A22F850A2001C87E7 /* Resources */,
+				65B2FBA77B79AF14B7FFFCCA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouBike;
+			productName = YouBike;
+			productReference = 9CECFB7C22F850A2001C87E7 /* YouBike.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9CECFB7422F850A2001C87E7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Ricky Lau";
+				TargetAttributes = {
+					9CECFB7B22F850A2001C87E7 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 9CECFB7722F850A2001C87E7 /* Build configuration list for PBXProject "YouBike" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9CECFB7322F850A2001C87E7;
+			productRefGroup = 9CECFB7D22F850A2001C87E7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9CECFB7B22F850A2001C87E7 /* YouBike */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9CECFB7A22F850A2001C87E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C787D2222F9D43C0055848C /* BikeParkVC.xib in Resources */,
+				9CECFB8A22F850A3001C87E7 /* LaunchScreen.storyboard in Resources */,
+				9CC9DB8622FAFD7A00647BC5 /* BikeParkCell.xib in Resources */,
+				9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */,
+				9CECFB8522F850A2001C87E7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		65B2FBA77B79AF14B7FFFCCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouBike/Pods-YouBike-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YouBike/Pods-YouBike-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YouBike/Pods-YouBike-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9ED703F1E6AA352B64EFB547 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouBike-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9CECFB7822F850A2001C87E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9CC9DB7E22F9D5B200647BC5 /* UIX.swift in Sources */,
+				9C787D2122F9D43C0055848C /* BikeParkVC.swift in Sources */,
+				9CEAA8AF22FB23D7004EF7CA /* TabBarVC.swift in Sources */,
+				9CC9DB8F22FB102A00647BC5 /* BaseTable.swift in Sources */,
+				9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */,
+				9CC9DB8D22FB093000647BC5 /* BaseNC.swift in Sources */,
+				9CC9DB8B22FB057B00647BC5 /* CoreX.swift in Sources */,
+				9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */,
+				9CC9DB8922FAFE8C00647BC5 /* BaseCell.swift in Sources */,
+				9C787D1A22F9CB440055848C /* LocationResponse.swift in Sources */,
+				9CECFB9C22F87BD3001C87E7 /* ViewModel.swift in Sources */,
+				9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */,
+				9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */,
+				9C787D1722F9CA1B0055848C /* MoyaX.swift in Sources */,
+				9CC9DB8222FAFA7D00647BC5 /* SequenceX.swift in Sources */,
+				9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */,
+				9CC9DB9322FB173200647BC5 /* UDKey.swift in Sources */,
+				9CECFB8022F850A2001C87E7 /* AppDelegate.swift in Sources */,
+				9C787D1C22F9CE0A0055848C /* BikeParkVM.swift in Sources */,
+				9C787D1222F9C4FF0055848C /* BaseVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9CECFB8322F850A2001C87E7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CECFB8422F850A2001C87E7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9CECFB8822F850A3001C87E7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9CECFB8922F850A3001C87E7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9CECFB8C22F850A3001C87E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9CECFB8D22F850A3001C87E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9CECFB8F22F850A3001C87E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YouBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricky.lau.YouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9CECFB9022F850A3001C87E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = YouBike/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricky.lau.YouBike;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9CECFB7722F850A2001C87E7 /* Build configuration list for PBXProject "YouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CECFB8C22F850A3001C87E7 /* Debug */,
+				9CECFB8D22F850A3001C87E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9CECFB8E22F850A3001C87E7 /* Build configuration list for PBXNativeTarget "YouBike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CECFB8F22F850A3001C87E7 /* Debug */,
+				9CECFB9022F850A3001C87E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9CECFB7422F850A2001C87E7 /* Project object */;
+}
