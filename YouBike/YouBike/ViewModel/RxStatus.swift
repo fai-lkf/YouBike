@@ -74,6 +74,7 @@ extension ObservableType {
         let uuid = UUID()
         return self
             .do(onError: {
+                print("@# Error: \($0)")
                 status.onEvent.accept(.error(uuid, $0))
             }, onCompleted: {
                 status.onEvent.accept(.clear(uuid))

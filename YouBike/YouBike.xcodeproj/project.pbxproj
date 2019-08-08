@@ -27,6 +27,8 @@
 		9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */; };
 		9CC9DB9322FB173200647BC5 /* UDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB9222FB173200647BC5 /* UDKey.swift */; };
 		9CEAA8AF22FB23D7004EF7CA /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */; };
+		9CEAA8B322FC5890004EF7CA /* ParkLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEAA8B122FC5890004EF7CA /* ParkLocationVC.swift */; };
+		9CEAA8B422FC5890004EF7CA /* ParkLocationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CEAA8B222FC5890004EF7CA /* ParkLocationVC.xib */; };
 		9CECFB8022F850A2001C87E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */; };
 		9CECFB8522F850A2001C87E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8322F850A2001C87E7 /* Main.storyboard */; };
 		9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8622F850A3001C87E7 /* Assets.xcassets */; };
@@ -58,6 +60,8 @@
 		9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkBookmarkVM.swift; sourceTree = "<group>"; };
 		9CC9DB9222FB173200647BC5 /* UDKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDKey.swift; sourceTree = "<group>"; };
 		9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		9CEAA8B122FC5890004EF7CA /* ParkLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkLocationVC.swift; sourceTree = "<group>"; };
+		9CEAA8B222FC5890004EF7CA /* ParkLocationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParkLocationVC.xib; sourceTree = "<group>"; };
 		9CECFB7C22F850A2001C87E7 /* YouBike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouBike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CECFB8422F850A2001C87E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		9C787D1022F9C4F60055848C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CEAA8B022FC57B4004EF7CA /* Location */,
 				9CC9DB8722FAFE7800647BC5 /* Base */,
 				9C787D1D22F9D4020055848C /* Park */,
 				9CEAA8AE22FB23D7004EF7CA /* TabBarVC.swift */,
@@ -147,6 +152,15 @@
 				9CC9DB9222FB173200647BC5 /* UDKey.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		9CEAA8B022FC57B4004EF7CA /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				9CEAA8B122FC5890004EF7CA /* ParkLocationVC.swift */,
+				9CEAA8B222FC5890004EF7CA /* ParkLocationVC.xib */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		9CECFB7322F850A2001C87E7 = {
@@ -265,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C787D2222F9D43C0055848C /* BikeParkVC.xib in Resources */,
+				9CEAA8B422FC5890004EF7CA /* ParkLocationVC.xib in Resources */,
 				9CECFB8A22F850A3001C87E7 /* LaunchScreen.storyboard in Resources */,
 				9CC9DB8622FAFD7A00647BC5 /* BikeParkCell.xib in Resources */,
 				9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */,
@@ -331,6 +346,7 @@
 				9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */,
 				9CC9DB8922FAFE8C00647BC5 /* BaseCell.swift in Sources */,
 				9C787D1A22F9CB440055848C /* LocationResponse.swift in Sources */,
+				9CEAA8B322FC5890004EF7CA /* ParkLocationVC.swift in Sources */,
 				9CECFB9C22F87BD3001C87E7 /* ViewModel.swift in Sources */,
 				9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */,
 				9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */,
@@ -424,6 +440,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -478,6 +495,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

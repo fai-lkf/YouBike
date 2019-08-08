@@ -34,6 +34,8 @@ class BaseTable: UITableView {
             $0.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
         }
         
+        separatorStyle = .none
+        
         rx.methodInvoked(#selector(dequeueReusableCell(withIdentifier:)))
             .map{ _ in false }
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)

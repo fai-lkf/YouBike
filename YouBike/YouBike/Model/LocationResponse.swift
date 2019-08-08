@@ -8,6 +8,10 @@
 
 import Foundation
 
+struct FakeResponse: Codable {
+    let abc: String
+}
+
 struct BikeParkResponse: Codable {
     let retCode: Int
     let retVal: [String: BikePark]

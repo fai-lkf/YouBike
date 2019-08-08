@@ -8,6 +8,11 @@
 
 import UIKit
 
+struct TabController {
+    let vc: UIViewController
+    let tab: UITabBarItem
+}
+
 class TabBarVC: UITabBarController {
     
     override func viewDidLoad() {
@@ -15,13 +20,21 @@ class TabBarVC: UITabBarController {
         
         let parkVM: ViewModel<BikeParkVM> = .init(.init())
         
-        viewControllers = [
-            (BikeParkVC.create(favouriteOnly: false, vm: parkVM), "列表"),
-            (BikeParkVC.create(favouriteOnly: true, vm: parkVM), "最愛")
-            ]
-            .map{ vc, title -> UINavigationController in
-                BaseNC(rootViewController: vc).with{
-                    $0.tabBarItem.title = title
+        let vcs: [TabController] = [
+            .init(
+                vc: BikeParkVC(favouriteOnly: false, vm: parkVM),
+                tab: .init(title: "列表", image: "list".image, tag: 0)
+            ),
+            .init(
+                vc: BikeParkVC(favouriteOnly: true, vm: parkVM),
+                tab: .init(title: "最愛", image: "bookmark".image, tag: 1)
+            )
+        ]
+        
+        viewControllers = vcs
+            .map{ model -> UINavigationController in
+                BaseNC(rootViewController: model.vc).with{
+                    $0.tabBarItem = model.tab
                 }
         }
     }

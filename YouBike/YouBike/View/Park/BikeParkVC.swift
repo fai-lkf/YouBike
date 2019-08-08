@@ -10,16 +10,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import PullUpController
 
 class BikeParkVC: BaseVC {
     
     var favouriteOnly = false
     
-    static func create(favouriteOnly: Bool, vm: ViewModel<BikeParkVM>) -> BikeParkVC {
-        let vc = BikeParkVC.xib()
-        vc.favouriteOnly = favouriteOnly
-        vc.vm = vm
-        return vc
+    convenience init(favouriteOnly: Bool, vm: ViewModel<BikeParkVM>) {
+        self.init()
+        self.favouriteOnly = favouriteOnly
+        self.vm = vm
     }
     
     @IBOutlet weak var table: BaseTable!
@@ -31,6 +31,8 @@ class BikeParkVC: BaseVC {
     private lazy var adjust = PublishRelay<String>()
     private lazy var bookmark: Observable<[String]> = ParkBookmarkVM.shared.observe(.init(adjust: adjust.asObservable())).bookmarked
     
+    let vc = UIViewController()
+    
     override func setupUI() {
         
         navigationItem.do{
@@ -40,6 +42,10 @@ class BikeParkVC: BaseVC {
         }
         
         table.regsiter(nib: BikeParkCell.self)
+        
+        
+        vc.view.backgroundColor = .black
+        attachPullUp(controller: vc, sizes: [0.2, 0.4, 0.6]).disposed(by: bag)
     }
     
     override func setupRX() {
