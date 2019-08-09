@@ -13,6 +13,15 @@ import RxGesture
 
 extension NSObject: Namable {}
 
+extension Reactive where Base: UIViewController {
+    var navigate: Binder<UIViewController> {
+        return Binder(base) { vc, target in
+            target.hidesBottomBarWhenPushed = true
+            vc.navigationController?.pushViewController(target, animated: true)
+        }
+    }
+}
+
 extension UIViewController {
     static func xib() -> Self { return self.init(nibName: name, bundle: nil) }
 }
@@ -26,11 +35,11 @@ extension CGColor {
 }
 
 extension UITableView {
-    func regsiter(nib cell: UITableViewCell.Type) {
+    func register(nib cell: UITableViewCell.Type) {
         register(cell.nib(), forCellReuseIdentifier: cell.name)
     }
     
-    func regsiter(class cell: UITableViewCell.Type) {
+    func register(class cell: UITableViewCell.Type) {
         register(cell, forCellReuseIdentifier: cell.name)
     }
     
@@ -100,6 +109,13 @@ extension UIView {
         get { return layer.shadowColor?.uiColor }
         set { layer.shadowColor = newValue?.cgColor }
     }
+    
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
 }
 
 extension String {
@@ -115,13 +131,14 @@ extension UIViewController {
         let gaps = sizes.map{ 1 - $0 }
         let maxGap = Int(containerH * gaps.max()!)
         let minGap = Int(containerH * gaps.min()!)
+        let avgGap = (maxGap + minGap) / 2
         
         addChild(controller)
         view.addSubview(controller.view)
         controller.view.snp.updateConstraints{
             $0.width.equalToSuperview()
             $0.height.equalTo(maxH)
-            $0.top.equalToSuperview().offset(maxGap)
+            $0.top.equalToSuperview().offset(avgGap)
         }
         
         return controller.view.rx.panGesture()

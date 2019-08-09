@@ -21,7 +21,7 @@ extension Int {
 }
 
 extension Date {
-    var yyyy_MM_dd_HH_mm: String { return "yyyy年MM月dd日 HH:mm".df.string(from: self) }
+    var yyyy_MM_dd_HH_mm_ss: String { return "yyyy年MM月dd日 HH:mm:ss".df.string(from: self) }
 }
 
 extension String {

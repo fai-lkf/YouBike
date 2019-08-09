@@ -14,7 +14,7 @@ struct BikeParkVM {
     private let locations = BehaviorRelay<[BikePark]>(value: [])
 }
 
-fileprivate let api: MoyaProvider<BikeLocationAPI> = .init(plugins: [NetworkLoggerPlugin()])
+fileprivate let api: MoyaProvider<BikeLocationAPI> = .init()
 extension BikeParkVM: ViewModelType {
     
     struct Trigger {

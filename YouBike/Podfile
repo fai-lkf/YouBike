@@ -11,6 +11,7 @@ target 'YouBike' do
   pod 'RxOptional'
   pod 'RxGesture'
   pod 'RxDataSources'
+  pod 'RxBinding'
 
   # Network
   pod 'Moya/RxSwift', '14.0.0-alpha.2'

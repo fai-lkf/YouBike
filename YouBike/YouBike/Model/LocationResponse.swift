@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import MapKit
 
 struct FakeResponse: Codable {
     let abc: String
@@ -32,7 +33,6 @@ struct BikePark: Codable {
     let aren: String // The N.W. side of Road Shifu & Road Song Shou.
     let bemp: String // 31
     let act: String // 1
-    let lastFetch = Date()
 }
 
 extension BikePark {
@@ -40,4 +40,27 @@ extension BikePark {
     var occupancy: Int { return Int(sbi) ?? 0 }
     var availability: Int { return Int(bemp) ?? 0 }
     var total: Int { return occupancy + availability }
+    
+    var coordiante: CLLocationCoordinate2D? {
+        guard
+            let lat = Double(lat),
+            let lng = Double(lng)
+            else { return nil }
+        return .init(latitude: lat, longitude: lng)
+    }
+    
+    var annotation: MKPointAnnotation {
+        return MKPointAnnotation().then{
+            $0.subtitle = sna
+            $0.title = ar
+            if let origin = coordiante {
+                $0.coordinate = origin
+            }
+        }
+    }
+    
+    var camera: MKMapCamera? {
+        guard let origin = coordiante else { return nil }
+        return .init(lookingAtCenter: origin, fromEyeCoordinate: origin, eyeAltitude: 400)
+    }
 }

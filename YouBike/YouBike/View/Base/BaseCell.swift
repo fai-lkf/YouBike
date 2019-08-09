@@ -10,6 +10,8 @@ import RxSwift
 import RxCocoa
 import UIKit
 import Then
+import RxDataSources
+import RxBinding
 
 class BaseCell: UITableViewCell {
     

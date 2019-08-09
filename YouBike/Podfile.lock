@@ -8,7 +8,9 @@ PODS:
   - Moya/RxSwift (14.0.0-alpha.2):
     - Moya/Core
     - RxSwift (~> 5.0)
-  - PullUpController (0.7.0)
+  - RxBinding (0.3.1):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
   - RxCocoa (5.0.0):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -31,7 +33,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage (= 4.0.0-beta.3)
   - Moya/RxSwift (= 14.0.0-alpha.2)
-  - PullUpController
+  - RxBinding
   - RxCocoa
   - RxDataSources
   - RxGesture
@@ -46,7 +48,7 @@ SPEC REPOS:
     - AlamofireImage
     - Differentiator
     - Moya
-    - PullUpController
+    - RxBinding
     - RxCocoa
     - RxDataSources
     - RxGesture
@@ -61,7 +63,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 980b4eccaed1fa559d78bc479d067ff89d23bc95
   Differentiator: 886080237d9f87f322641dedbc5be257061b0602
   Moya: a6f1894cf6baec301aa02b0ecf10e5d8ade556ae
-  PullUpController: 5c8710cb686dca43d5850ae994debb7fdb824b75
+  RxBinding: 58be2cf1311165489a66eacb4a3e33932d598a53
   RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
   RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
   RxGesture: 0cd8e37ff9a266e1c31f46bcaed6de1c536bc81e
@@ -71,6 +73,6 @@ SPEC CHECKSUMS:
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: 0157115e883545c77967b452fe74a1d25fb796e1
 
-PODFILE CHECKSUM: 6a50daaa535c861d5b92832af809ffcd96497cd9
+PODFILE CHECKSUM: 6912fec1c6963efd13c6b0609707971a96d82681
 
 COCOAPODS: 1.7.1

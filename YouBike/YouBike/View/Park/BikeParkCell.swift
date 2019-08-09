@@ -9,6 +9,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import RxDataSources
+import RxBinding
 
 class BikeParkCell: BaseCell {
     
@@ -36,7 +38,7 @@ class BikeParkCell: BaseCell {
             lblName.text = park.sna
             lblAddress.text = park.ar
             lblTotal.text = "停車格: \(park.total)"
-            lblLastUpdate.text = "最後更新於: \(park.lastFetch.yyyy_MM_dd_HH_mm)"
+            lblLastUpdate.text = "最後更新於: \("yyyyMMddHHmmss".df.date(from: park.mday)?.yyyy_MM_dd_HH_mm_ss ?? "")"
             
             vStatus.isHidden = park.total == 0
             guard park.total != 0 else { return }
@@ -52,18 +54,32 @@ class BikeParkCell: BaseCell {
         }
     }
     
-    func set(_ park: BikePark, selection: PublishRelay<String>, bookmark: Observable<[String]>) {
+    private let (adjust, bookmark) = ParkBookmarkVM.request()
+    
+    func set(_ park: BikePark) {
         model = park
         
-        imgStar.rx.onTap
-            .map{ park.sno }
-            .bind(to: selection)
-            .disposed(by: bag)
+        imgStar.rx.onTap.map{ park.sno }
+            ~> adjust
+            ~ bag
         
-        bookmark
-            .map{ $0.contains(park.sno) ? UIColor.blue : .gray }
-            .bind(to: imgStar.rx.tintColor)
-            .disposed(by: bag)
+        bookmark.map{ $0.contains(park.sno) ? UIColor.blue : .gray }
+            ~> imgStar.rx.tintColor
+            ~ bag
     }
     
+}
+
+extension BikeParkCell {
+    static func dataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, BikePark>> {
+        return .init(configureCell: { (ds, tv, ip, model) -> UITableViewCell in
+            let cell: BikeParkCell = tv.dequeue(for: ip)
+            cell.set(model)
+            return cell
+        }, titleForHeaderInSection: { (ds, s) -> String? in
+            return ds[s].model
+        }, canEditRowAtIndexPath: { (ds, ip) -> Bool in
+            return true
+        })
+    }
 }

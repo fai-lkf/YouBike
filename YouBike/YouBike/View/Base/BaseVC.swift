@@ -10,8 +10,14 @@ import RxSwift
 import RxCocoa
 import Then
 import SnapKit
+import RxDataSources
+import RxBinding
 
 class BaseVC: UIViewController {
+    
+    deinit {
+        print("@# Deinit \(type(of: self).name)")
+    }
     
     lazy var bag = DisposeBag()
     var isProcessing: [Driver<Bool>] { get { return [] } }
@@ -31,9 +37,7 @@ class BaseVC: UIViewController {
             
             Driver
                 .combineLatest(isProcessing)
-                .map{ $0.contains(true) }
-                .drive($0.rx.isAnimating)
-                .disposed(by: bag)
+                .map{ $0.contains(true) } ~> $0.rx.isAnimating ~ bag
         }
     }
     

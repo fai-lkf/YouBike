@@ -13,6 +13,14 @@ struct ParkBookmarkVM {
     private let bookmark = BehaviorRelay<[String]>(value: UserDefaults.standard.stringArray(forKey: UDKey.bookmark.key) ?? [])
 }
 
+extension ParkBookmarkVM {
+    static func request() -> (PublishRelay<String>, Observable<[String]>) {
+        let adjust = PublishRelay<String>()
+        let bookmark: Observable<[String]> = ParkBookmarkVM.shared.observe(.init(adjust: adjust.asObservable())).bookmarked
+        return (adjust, bookmark)
+    }
+}
+
 extension ParkBookmarkVM: ViewModelType {
     
     static let shared: ViewModel<ParkBookmarkVM> = .init(.init())

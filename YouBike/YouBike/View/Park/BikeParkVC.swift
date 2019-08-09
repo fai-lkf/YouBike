@@ -6,16 +6,15 @@
 //  Copyright © 2019 Ricky Lau. All rights reserved.
 //
 
-import UIKit
 import RxSwift
 import RxCocoa
+import UIKit
+import RxBinding
 import RxDataSources
-import PullUpController
 
 class BikeParkVC: BaseVC {
     
-    var favouriteOnly = false
-    
+    private var favouriteOnly = false
     convenience init(favouriteOnly: Bool, vm: ViewModel<BikeParkVM>) {
         self.init()
         self.favouriteOnly = favouriteOnly
@@ -28,24 +27,16 @@ class BikeParkVC: BaseVC {
     override var isProcessing: [Driver<Bool>] { return [vm.isProcessing] }
     
     private var vm: ViewModel<BikeParkVM>!
-    private lazy var adjust = PublishRelay<String>()
-    private lazy var bookmark: Observable<[String]> = ParkBookmarkVM.shared.observe(.init(adjust: adjust.asObservable())).bookmarked
-    
-    let vc = UIViewController()
+    private let adjust = ParkBookmarkVM.request().0
     
     override func setupUI() {
         
         navigationItem.do{
             $0.title = favouriteOnly ? "最愛列表" : "YouBike 停車場列表"
-            $0.largeTitleDisplayMode = .always
             $0.rightBarButtonItems = [btnRefresh]
         }
         
-        table.regsiter(nib: BikeParkCell.self)
-        
-        
-        vc.view.backgroundColor = .black
-        attachPullUp(controller: vc, sizes: [0.2, 0.4, 0.6]).disposed(by: bag)
+        table.register(nib: BikeParkCell.self)
     }
     
     override func setupRX() {
@@ -59,7 +50,7 @@ class BikeParkVC: BaseVC {
         
         let filterObs = Observable
             .combineLatest(
-                bookmark,
+                ParkBookmarkVM.request().1,
                 Observable.just(favouriteOnly)
             )
             .map{ $0.1 ? $0.0 : nil }
@@ -87,18 +78,21 @@ class BikeParkVC: BaseVC {
                 }
             }
             .map{ $0.map{ SectionModel(model: $0.0, items: $0.1) } }
-            .bind(to: table.rx.items(dataSource: dataSource()))
-            .disposed(by: bag)
+            ~> table.rx.items(dataSource: BikeParkCell.dataSource())
+            ~ bag
+        
+        table.rx.modelSelected(BikePark.self)
+            .map{ [unowned self] in ParkLocationVC(park: $0, vm: self.vm) }
+            ~> rx.navigate
+            ~ bag
+        
+        guard favouriteOnly else { return }
+        table.rx.modelDeleted(BikePark.self)
+            .map{ $0.sno }
+            ~> adjust
+            ~ bag
     }
     
-    private func dataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, BikePark>> {
-        return .init(configureCell: { [unowned self] (ds, tv, ip, model) -> UITableViewCell in
-            let cell: BikeParkCell = tv.dequeue(for: ip)
-            cell.set(model, selection: self.adjust, bookmark: self.bookmark)
-            return cell
-            }, titleForHeaderInSection: { (ds, s) -> String? in
-                return ds[s].model
-        })
-    }
+    
     
 }
