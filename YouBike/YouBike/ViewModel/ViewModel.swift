@@ -25,6 +25,15 @@ final class ViewModel<V: ViewModelType> {
         return vm.convert(trigger, status: status, with: bag)
     }
     
+    func prompt(error: Error) {
+        status.onEvent.accept(.error(UUID(), error))
+    }
+    
+    var error: Binder<Error> {
+        return Binder(self) { vm, err in
+            vm.prompt(error: err)
+        }
+    }
 }
 
 protocol ViewModelType {

@@ -27,20 +27,23 @@ class ParkLocationVC: BaseVC {
     
     private lazy var btnRefresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
     override var isProcessing: [Driver<Bool>] { return [vm.isProcessing] }
-
+    
     override func setupUI() {
         navigationItem.rightBarButtonItem = btnRefresh
         navigationItem.title = park.sna
+        map.delegate = self
         
-        guard let camera = park.camera else { return }
-        map.do{
-            $0.setCamera(camera, animated: true)
-            $0.addAnnotation(park.annotation)
+        guard park.camera != nil else {
+            return vm.prompt(error: park.error)
         }
+        Observable
+            .just(park)
+            ~> map.rx.showPark
+            ~ bag
     }
     
     override func setupRX() {
-    
+        
         let output = vm.observe(.init(fetch: btnRefresh.rx.tap.asObservable()))
         
         let parkObs = Observable.merge(
@@ -50,6 +53,12 @@ class ParkLocationVC: BaseVC {
             .filterNil()
         
         attachPullUp(controller: ParkDetailInfo(park: parkObs), sizes: [0.2, 0.5]) ~ bag
+    }
+}
+
+extension ParkLocationVC: MKMapViewDelegate {
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        return annotation.bikePark
     }
 }
 
@@ -75,9 +84,9 @@ class ParkDetailInfo: BaseVC {
     }
     
     override func setupRX() {
-       park
+        park
             .map{ [SectionModel(model: "", items: [$0])] }
-            ~> table.rx.items(dataSource: BikeParkCell.dataSource())
+            ~> table.rx.items(dataSource: BikeParkCell.dataSource(currPark: nil))
             ~ bag
     }
 }

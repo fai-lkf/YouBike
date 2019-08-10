@@ -66,7 +66,42 @@ class RxStatus {
             .bind(to: error)
             .disposed(by: bag)
         
+        error
+            .map{ $0.first }
+            .filterNil()
+            .flatMap{ target -> Observable<UUID> in
+                guard let root = UIApplication.shared.delegate?.window??.rootViewController else { return .empty() }
+                return Observable<UUID>.create{ observer in
+                    let alert = UIAlertController(title: "Error", message: target.error.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(.init(title: "OK", style: .default) { _ in
+                        observer.onNext(target.uuid)
+                        observer.onCompleted()
+                        })
+                    root.present(alert, animated: true)
+                    return Disposables.create()
+                }
+            }
+            .withLatestFrom(error) { shown, all -> [UUIDError] in
+                var result = all
+                result.removeAll(where: { $0.uuid == shown })
+                return result
+            }
+            .bind(to: error)
+            .disposed(by: bag)
+        
     }
+}
+
+struct StringError {
+    let message: String
+}
+
+extension StringError: LocalizedError {
+    var errorDescription: String? { return message }
+}
+
+extension String {
+    var error: StringError { return .init(message: self) }
 }
 
 extension ObservableType {
@@ -74,7 +109,6 @@ extension ObservableType {
         let uuid = UUID()
         return self
             .do(onError: {
-                print("@# Error: \($0)")
                 status.onEvent.accept(.error(uuid, $0))
             }, onCompleted: {
                 status.onEvent.accept(.clear(uuid))

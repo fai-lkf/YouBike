@@ -73,7 +73,7 @@
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Availability" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cSV-eI-4Y4">
                                                         <rect key="frame" x="229" y="0.0" width="98" height="36"/>
                                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -152,6 +152,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="card" destination="gmt-ZJ-7Js" id="7MC-xB-wMh"/>
                 <outlet property="imgStar" destination="Ukj-if-jNG" id="XRv-Bc-MzO"/>
                 <outlet property="lblAddress" destination="G9J-I5-U5X" id="ePC-G1-NGv"/>
                 <outlet property="lblAvailability" destination="cSV-eI-4Y4" id="0EU-fe-YpP"/>

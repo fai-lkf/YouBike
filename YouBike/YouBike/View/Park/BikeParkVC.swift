@@ -26,8 +26,9 @@ class BikeParkVC: BaseVC {
     
     override var isProcessing: [Driver<Bool>] { return [vm.isProcessing] }
     
-    private var vm: ViewModel<BikeParkVM>!
+    internal var vm: ViewModel<BikeParkVM>!
     private let adjust = ParkBookmarkVM.request().0
+    lazy var currPark = BehaviorRelay<BikePark?>(value: nil)
     
     override func setupUI() {
         
@@ -78,13 +79,15 @@ class BikeParkVC: BaseVC {
                 }
             }
             .map{ $0.map{ SectionModel(model: $0.0, items: $0.1) } }
-            ~> table.rx.items(dataSource: BikeParkCell.dataSource())
+            ~> table.rx.items(dataSource: BikeParkCell.dataSource(currPark: currPark.asObservable()))
             ~ bag
         
-        table.rx.modelSelected(BikePark.self)
-            .map{ [unowned self] in ParkLocationVC(park: $0, vm: self.vm) }
-            ~> rx.navigate
-            ~ bag
+        if UIDevice.current.userInterfaceIdiom != .pad {
+            table.rx.modelSelected(BikePark.self)
+                .map{ [unowned self] in ParkLocationVC(park: $0, vm: self.vm) }
+                ~> rx.navigate
+                ~ bag
+        }
         
         guard favouriteOnly else { return }
         table.rx.modelDeleted(BikePark.self)

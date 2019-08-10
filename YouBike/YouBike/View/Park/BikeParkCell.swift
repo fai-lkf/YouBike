@@ -22,6 +22,7 @@ class BikeParkCell: BaseCell {
     @IBOutlet weak var lblAvailability: UILabel!
     @IBOutlet weak var lblLastUpdate: UILabel!
     @IBOutlet weak var imgStar: UIImageView!
+    @IBOutlet weak var card: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -56,9 +57,13 @@ class BikeParkCell: BaseCell {
     
     private let (adjust, bookmark) = ParkBookmarkVM.request()
     
-    func set(_ park: BikePark) {
+    func set(_ park: BikePark, currPark: Observable<BikePark?>?) {
         model = park
         
+        currPark?.map{ $0?.sna == park.sna ? UIColor.yellow : .white }
+            .bind(to: card.rx.backgroundColor)
+            .disposed(by: bag)
+
         imgStar.rx.onTap.map{ park.sno }
             ~> adjust
             ~ bag
@@ -71,13 +76,13 @@ class BikeParkCell: BaseCell {
 }
 
 extension BikeParkCell {
-    static func dataSource() -> RxTableViewSectionedReloadDataSource<SectionModel<String, BikePark>> {
-        return .init(configureCell: { (ds, tv, ip, model) -> UITableViewCell in
+    static func dataSource(currPark: Observable<BikePark?>?) -> RxTableViewSectionedReloadDataSource<SectionModel<String, BikePark>> {
+        return .init(configureCell: { [weak currPark] (ds, tv, ip, model) -> UITableViewCell in
             let cell: BikeParkCell = tv.dequeue(for: ip)
-            cell.set(model)
+            cell.set(model, currPark: currPark)
             return cell
-        }, titleForHeaderInSection: { (ds, s) -> String? in
-            return ds[s].model
+            }, titleForHeaderInSection: { (ds, s) -> String? in
+                return ds[s].model
         }, canEditRowAtIndexPath: { (ds, ip) -> Bool in
             return true
         })

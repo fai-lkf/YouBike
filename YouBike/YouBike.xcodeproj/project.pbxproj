@@ -34,6 +34,8 @@
 		9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8622F850A3001C87E7 /* Assets.xcassets */; };
 		9CECFB8A22F850A3001C87E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CECFB8822F850A3001C87E7 /* LaunchScreen.storyboard */; };
 		9CECFB9C22F87BD3001C87E7 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */; };
+		9CF36ACA22FDB65B00FE2F21 /* BikeParkPadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF36AC822FDB65B00FE2F21 /* BikeParkPadVC.swift */; };
+		9CF36ACB22FDB65B00FE2F21 /* BikeParkPadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF36AC922FDB65B00FE2F21 /* BikeParkPadVC.xib */; };
 		A10CBD2901402D82BE74E800 /* Pods_YouBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		9CECFB8922F850A3001C87E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CECFB8B22F850A3001C87E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		9CF36AC822FDB65B00FE2F21 /* BikeParkPadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeParkPadVC.swift; sourceTree = "<group>"; };
+		9CF36AC922FDB65B00FE2F21 /* BikeParkPadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BikeParkPadVC.xib; sourceTree = "<group>"; };
 		C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.debug.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +131,8 @@
 				9C787D2022F9D43C0055848C /* BikeParkVC.xib */,
 				9CC9DB8322FAFD7A00647BC5 /* BikeParkCell.swift */,
 				9CC9DB8422FAFD7A00647BC5 /* BikeParkCell.xib */,
+				9CF36AC822FDB65B00FE2F21 /* BikeParkPadVC.swift */,
+				9CF36AC922FDB65B00FE2F21 /* BikeParkPadVC.xib */,
 			);
 			path = Park;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			files = (
 				9C787D2222F9D43C0055848C /* BikeParkVC.xib in Resources */,
 				9CEAA8B422FC5890004EF7CA /* ParkLocationVC.xib in Resources */,
+				9CF36ACB22FDB65B00FE2F21 /* BikeParkPadVC.xib in Resources */,
 				9CECFB8A22F850A3001C87E7 /* LaunchScreen.storyboard in Resources */,
 				9CC9DB8622FAFD7A00647BC5 /* BikeParkCell.xib in Resources */,
 				9CECFB8722F850A3001C87E7 /* Assets.xcassets in Resources */,
@@ -351,6 +358,7 @@
 				9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */,
 				9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */,
 				9C787D1722F9CA1B0055848C /* MoyaX.swift in Sources */,
+				9CF36ACA22FDB65B00FE2F21 /* BikeParkPadVC.swift in Sources */,
 				9CC9DB8222FAFA7D00647BC5 /* SequenceX.swift in Sources */,
 				9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */,
 				9CC9DB9322FB173200647BC5 /* UDKey.swift in Sources */,

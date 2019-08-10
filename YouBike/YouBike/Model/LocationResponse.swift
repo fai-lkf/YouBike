@@ -43,16 +43,16 @@ extension BikePark {
     
     var coordiante: CLLocationCoordinate2D? {
         guard
-            let lat = Double(lat),
-            let lng = Double(lng)
+            let lat = Double(lat.trimmingCharacters(in: .whitespacesAndNewlines)),
+            let lng = Double(lng.trimmingCharacters(in: .whitespacesAndNewlines))
             else { return nil }
         return .init(latitude: lat, longitude: lng)
     }
     
     var annotation: MKPointAnnotation {
         return MKPointAnnotation().then{
-            $0.subtitle = sna
             $0.title = ar
+            $0.subtitle = sna
             if let origin = coordiante {
                 $0.coordinate = origin
             }
@@ -62,5 +62,18 @@ extension BikePark {
     var camera: MKMapCamera? {
         guard let origin = coordiante else { return nil }
         return .init(lookingAtCenter: origin, fromEyeCoordinate: origin, eyeAltitude: 400)
+    }
+    
+    var error: Error {
+        return ["\(sna) 沒有提供經緯度", "地址為：\(ar)"].joined(separator: "\n").error
+    }
+}
+
+extension MKAnnotation {
+    var bikePark: MKAnnotationView {
+        return MKAnnotationView(annotation: self, reuseIdentifier: "BIKEPARK").then{
+            $0.image = "bike-parking".image
+            $0.canShowCallout = true
+        }
     }
 }

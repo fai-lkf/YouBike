@@ -20,13 +20,19 @@ class TabBarVC: UITabBarController {
         
         let parkVM: ViewModel<BikeParkVM> = .init(.init())
         
+        let iPad = UIDevice.current.userInterfaceIdiom == .pad
+        
         let vcs: [TabController] = [
             .init(
-                vc: BikeParkVC(favouriteOnly: false, vm: parkVM),
+                vc: iPad
+                    ? BikeParkPadVC(favouriteOnly: false, vm: parkVM)
+                    : BikeParkVC(favouriteOnly: false, vm: parkVM),
                 tab: .init(title: "列表", image: "list".image, tag: 0)
             ),
             .init(
-                vc: BikeParkVC(favouriteOnly: true, vm: parkVM),
+                vc: iPad
+                    ? BikeParkPadVC(favouriteOnly: true, vm: parkVM)
+                    : BikeParkVC(favouriteOnly: true, vm: parkVM),
                 tab: .init(title: "最愛", image: "bookmark".image, tag: 1)
             )
         ]
