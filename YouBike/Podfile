@@ -19,6 +19,7 @@ target 'YouBike' do
 
   # UI
   pod 'SnapKit'
+  pod 'Pulley'
 
   # Utility
   pod 'Then'

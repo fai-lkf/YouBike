@@ -29,8 +29,10 @@ class ParkLocationVC: BaseVC {
     override var isProcessing: [Driver<Bool>] { return [vm.isProcessing] }
     
     override func setupUI() {
-        navigationItem.rightBarButtonItem = btnRefresh
-        navigationItem.title = park.sna
+        parent?.do{
+            $0.navigationItem.rightBarButtonItem = btnRefresh
+            $0.navigationItem.title = park.sna
+        }
         map.delegate = self
         
         guard park.camera != nil else {
@@ -43,16 +45,7 @@ class ParkLocationVC: BaseVC {
     }
     
     override func setupRX() {
-        
-        let output = vm.observe(.init(fetch: btnRefresh.rx.tap.asObservable()))
-        
-        let parkObs = Observable.merge(
-            output.parks.map{ [weak self] in $0.first(where: { $0.sno == self?.park.sno }) },
-            .just(park)
-            )
-            .filterNil()
-        
-        attachPullUp(controller: ParkDetailInfo(park: parkObs), sizes: [0.2, 0.5]) ~ bag
+        _ = vm.observe(.init(fetch: btnRefresh.rx.tap.asObservable()))
     }
 }
 
@@ -62,12 +55,14 @@ extension ParkLocationVC: MKMapViewDelegate {
     }
 }
 
-class ParkDetailInfo: BaseVC {
+class ParkDetailInfoVC: BaseVC {
     
-    private var park: Observable<BikePark>!
-    convenience init(park: Observable<BikePark>!) {
+    private var park: BikePark!
+    private var vm: ViewModel<BikeParkVM>!
+    convenience init(park: BikePark!, vm: ViewModel<BikeParkVM>) {
         self.init()
         self.park = park
+        self.vm = vm
     }
     
     private lazy var table = UITableView()
@@ -76,15 +71,23 @@ class ParkDetailInfo: BaseVC {
         view.addSubview(table)
         table.bounces = false
         table.snp.updateConstraints{
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.topMargin)
-            $0.left.right.bottom.equalToSuperview()
+            $0.edges.equalToSuperview()
         }
         table.separatorStyle = .none
         table.register(nib: BikeParkCell.self)
     }
     
     override func setupRX() {
-        park
+        let output = vm.observe(nil)
+        
+        Observable
+            .merge(
+                output
+                    .parks
+                    .map{ [weak self] in $0.first(where: { $0.sno == self?.park.sno }) },
+                .just(park)
+            )
+            .filterNil()
             .map{ [SectionModel(model: "", items: [$0])] }
             ~> table.rx.items(dataSource: BikeParkCell.dataSource(currPark: nil))
             ~ bag

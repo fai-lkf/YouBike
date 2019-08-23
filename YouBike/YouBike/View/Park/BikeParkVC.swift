@@ -11,6 +11,7 @@ import RxCocoa
 import UIKit
 import RxBinding
 import RxDataSources
+import Pulley
 
 class BikeParkVC: BaseVC {
     
@@ -84,7 +85,13 @@ class BikeParkVC: BaseVC {
         
         if UIDevice.current.userInterfaceIdiom != .pad {
             table.rx.modelSelected(BikePark.self)
-                .map{ [unowned self] in ParkLocationVC(park: $0, vm: self.vm) }
+                .map{ [unowned self] in
+                    PulleyViewController(
+                        contentViewController: ParkLocationVC(park: $0, vm: self.vm),
+                        drawerViewController: ParkDetailInfoVC(park: $0, vm: self.vm)
+                    )
+                        .then{ $0.drawerTopInset = 0 }
+                }
                 ~> rx.navigate
                 ~ bag
         }

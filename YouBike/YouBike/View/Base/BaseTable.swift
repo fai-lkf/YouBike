@@ -36,7 +36,12 @@ class BaseTable: UITableView {
         
         separatorStyle = .none
         
-        rx.methodInvoked(#selector(dequeueReusableCell(withIdentifier:)))
+        Observable
+            .merge(
+                rx.methodInvoked(#selector(dequeueReusableCell(withIdentifier:))).map{ _ in () },
+                refresh.delay(.seconds(5), scheduler: MainScheduler.instance)
+            )
+            .filter{ [weak self] _ in self?.control.isRefreshing == true }
             .map{ _ in false }
             .throttle(.milliseconds(500), scheduler: MainScheduler.instance)
             .bind(to: control.rx.isRefreshing)
