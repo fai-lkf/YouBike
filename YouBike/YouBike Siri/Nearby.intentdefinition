@@ -16,13 +16,13 @@
 	<array>
 		<dict>
 			<key>INIntentCategory</key>
-			<string>search</string>
+			<string>information</string>
 			<key>INIntentDescription</key>
-			<string>Search YouBike Park nearby</string>
+			<string>搜尋附近的YouBike停車場</string>
 			<key>INIntentDescriptionID</key>
 			<string>58MkXs</string>
 			<key>INIntentLastParameterTag</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>INIntentName</key>
 			<string>NearbyPark</string>
 			<key>INIntentParameterCombinations</key>
@@ -34,13 +34,13 @@
 					<key>INIntentParameterCombinationSubtitle</key>
 					<string></string>
 					<key>INIntentParameterCombinationSubtitleID</key>
-					<string>TMox6N</string>
+					<string>mCy20D</string>
 					<key>INIntentParameterCombinationSupportsBackgroundExecution</key>
 					<true/>
 					<key>INIntentParameterCombinationTitle</key>
 					<string></string>
 					<key>INIntentParameterCombinationTitleID</key>
-					<string>rcZ1aH</string>
+					<string>uhsBMp</string>
 				</dict>
 			</dict>
 			<key>INIntentParameters</key>
@@ -51,7 +51,7 @@
 				<array>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string></string>
+						<string>${errorMessage}</string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>PG1JEL</string>
 						<key>INIntentResponseCodeName</key>
@@ -61,7 +61,7 @@
 					</dict>
 					<dict>
 						<key>INIntentResponseCodeFormatString</key>
-						<string>附近共有 ${availbility} 可用停車位。</string>
+						<string></string>
 						<key>INIntentResponseCodeFormatStringID</key>
 						<string>j3mZCC</string>
 						<key>INIntentResponseCodeName</key>
@@ -71,7 +71,7 @@
 					</dict>
 				</array>
 				<key>INIntentResponseLastParameterTag</key>
-				<integer>5</integer>
+				<integer>6</integer>
 				<key>INIntentResponseParameters</key>
 				<array>
 					<dict>
@@ -98,12 +98,24 @@
 						<key>INIntentResponseParameterType</key>
 						<string>Integer</string>
 					</dict>
+					<dict>
+						<key>INIntentResponseParameterDisplayPriority</key>
+						<integer>3</integer>
+						<key>INIntentResponseParameterName</key>
+						<string>errorMessage</string>
+						<key>INIntentResponseParameterSupportsMultipleValues</key>
+						<false/>
+						<key>INIntentResponseParameterTag</key>
+						<integer>6</integer>
+						<key>INIntentResponseParameterType</key>
+						<string>String</string>
+					</dict>
 				</array>
 			</dict>
 			<key>INIntentRestrictions</key>
 			<integer>0</integer>
 			<key>INIntentTitle</key>
-			<string>NearbyPark</string>
+			<string>YouBike停車場</string>
 			<key>INIntentTitleID</key>
 			<string>NEcHDr</string>
 			<key>INIntentType</key>
@@ -111,7 +123,7 @@
 			<key>INIntentUserConfirmationRequired</key>
 			<false/>
 			<key>INIntentVerb</key>
-			<string>Search</string>
+			<string>View</string>
 		</dict>
 	</array>
 </dict>

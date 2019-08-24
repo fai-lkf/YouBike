@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RxDataSources
 import RxBinding
+import YouBikeKit
 
 class BikeParkCell: BaseCell {
     

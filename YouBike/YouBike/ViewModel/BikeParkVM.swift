@@ -9,6 +9,7 @@
 import RxSwift
 import RxCocoa
 import Moya
+import YouBikeKit
 
 struct BikeParkVM {
     private let locations = BehaviorRelay<[BikePark]>(value: [])

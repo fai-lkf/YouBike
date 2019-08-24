@@ -8,20 +8,20 @@
 
 import Moya
 
-enum BikeLocationAPI {
+public enum BikeLocationAPI {
     case list
 }
 
 extension BikeLocationAPI: TargetType {
     
-    var path: String {
+    public var path: String {
         switch self {
         case .list:
             return "/YouBikeTP.json"
         }
     }
     
-    var method: Method {
+    public var method: Moya.Method {
         switch self {
         case .list:
             return .get

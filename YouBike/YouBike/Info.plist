@@ -25,6 +25,8 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>定位功能</string>
 	<key>NSSiriUsageDescription</key>
 	<string>YouBike Park Nearby</string>
 	<key>NSUserActivityTypes</key>

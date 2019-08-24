@@ -20,16 +20,15 @@ extension Sequence {
 }
 
 extension Sequence where Element: Hashable {
-    func unique() -> [Element] {
+    public func unique() -> [Element] {
         var set = Set<Element>()
         return filter { set.insert($0).inserted }
     }
-    func set() -> Set<Element> { return .init(self) }
-   
+    public func set() -> Set<Element> { return .init(self) }
 }
 
 extension Array where Element: Hashable {
-    func insertOrRemove(_ target: Element) -> [Element] {
+    public func insertOrRemove(_ target: Element) -> [Element] {
         var result = self
         if let index = result.firstIndex(of: target) {
             result.remove(at: index)

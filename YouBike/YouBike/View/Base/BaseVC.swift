@@ -15,9 +15,7 @@ import RxBinding
 
 class BaseVC: UIViewController {
     
-    deinit {
-        print("@# Deinit \(type(of: self).name)")
-    }
+    deinit { print("@# Deinit \(type(of: self).name)") }
     
     lazy var bag = DisposeBag()
     var isProcessing: [Driver<Bool>] { get { return [] } }

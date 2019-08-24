@@ -14,7 +14,7 @@ import RxGesture
 extension NSObject: Namable {}
 
 extension Reactive where Base: UIViewController {
-    var navigate: Binder<UIViewController> {
+    public var navigate: Binder<UIViewController> {
         return Binder(base) { vc, target in
             target.hidesBottomBarWhenPushed = true
             vc.navigationController?.pushViewController(target, animated: true)
@@ -31,25 +31,25 @@ extension UIResponder {
 }
 
 extension CGColor {
-    var uiColor: UIColor { return UIColor(cgColor: self) }
+    public var uiColor: UIColor { return UIColor(cgColor: self) }
 }
 
 extension UITableView {
-    func register(nib cell: UITableViewCell.Type) {
+    public func register(nib cell: UITableViewCell.Type) {
         register(cell.nib(), forCellReuseIdentifier: cell.name)
     }
     
-    func register(class cell: UITableViewCell.Type) {
+    public func register(class cell: UITableViewCell.Type) {
         register(cell, forCellReuseIdentifier: cell.name)
     }
     
-    func dequeue<T: UITableViewCell>(for indexPath: IndexPath) -> T {
+    public func dequeue<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withIdentifier: T.name, for: indexPath) as! T
     }
 }
 
 extension Reactive where Base: UIView {
-    var onTap: Observable<Void> {
+    public var onTap: Observable<Void> {
         return tapGesture()
             .when(.recognized)
             .map{ _ in () }
@@ -57,7 +57,7 @@ extension Reactive where Base: UIView {
 }
 
 extension Reactive where Base: UIImageView {
-    var tintColor: Binder<UIColor?> {
+    public var tintColor: Binder<UIColor?> {
         return Binder(base) { iv, tint in
             iv.tintColor = tint
         }
@@ -66,7 +66,7 @@ extension Reactive where Base: UIImageView {
 
 extension UIView {
     @IBInspectable
-    var cornerRadius: CGFloat {
+    public var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set {
             clipsToBounds = true
@@ -75,42 +75,42 @@ extension UIView {
     }
     
     @IBInspectable
-    var borderWidth: CGFloat {
+    public var borderWidth: CGFloat {
         get { return layer.borderWidth }
         set { layer.borderWidth = newValue }
     }
     
     @IBInspectable
-    var borderColor: UIColor? {
+    public var borderColor: UIColor? {
         get { return layer.borderColor?.uiColor }
         set { layer.borderColor = newValue?.cgColor }
     }
     
     @IBInspectable
-    var shadowRadius: CGFloat {
+    public var shadowRadius: CGFloat {
         get { return layer.shadowRadius }
         set { layer.shadowRadius = newValue }
     }
     
     @IBInspectable
-    var shadowOpacity: Float {
+    public var shadowOpacity: Float {
         get { return layer.shadowOpacity }
         set { layer.shadowOpacity = newValue }
     }
     
     @IBInspectable
-    var shadowOffset: CGSize {
+    public var shadowOffset: CGSize {
         get { return layer.shadowOffset }
         set { layer.shadowOffset = newValue }
     }
     
     @IBInspectable
-    var shadowColor: UIColor? {
+    public var shadowColor: UIColor? {
         get { return layer.shadowColor?.uiColor }
         set { layer.shadowColor = newValue?.cgColor }
     }
     
-    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    public func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -119,5 +119,5 @@ extension UIView {
 }
 
 extension String {
-    var image: UIImage? { return UIImage(named: self) }
+    public var image: UIImage? { return UIImage(named: self) }
 }

@@ -92,18 +92,6 @@ class RxStatus {
     }
 }
 
-struct StringError {
-    let message: String
-}
-
-extension StringError: LocalizedError {
-    var errorDescription: String? { return message }
-}
-
-extension String {
-    var error: StringError { return .init(message: self) }
-}
-
 extension ObservableType {
     func handle(status: RxStatus) -> Observable<Element> {
         let uuid = UUID()

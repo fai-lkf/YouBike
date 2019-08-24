@@ -12,6 +12,9 @@ import UIKit
 import RxBinding
 import RxDataSources
 import Pulley
+import YouBikeKit
+import IntentsUI
+import CoreLocation
 
 class BikeParkVC: BaseVC {
     
@@ -24,18 +27,27 @@ class BikeParkVC: BaseVC {
     
     @IBOutlet weak var table: BaseTable!
     private lazy var btnRefresh = UIBarButtonItem(barButtonSystemItem: .refresh, target: nil, action: nil)
+    private lazy var btnSiri = INUIAddVoiceShortcutButton(style: .whiteOutline)
     
     override var isProcessing: [Driver<Bool>] { return [vm.isProcessing] }
     
     internal var vm: ViewModel<BikeParkVM>!
     private let adjust = ParkBookmarkVM.request().0
     lazy var currPark = BehaviorRelay<BikePark?>(value: nil)
+    private let manager = CLLocationManager()
     
     override func setupUI() {
-        
         navigationItem.do{
             $0.title = favouriteOnly ? "最愛列表" : "YouBike 停車場列表"
-            $0.rightBarButtonItems = [btnRefresh]
+            $0.rightBarButtonItems = [btnRefresh, UIBarButtonItem(customView: btnSiri)]
+        }
+        
+        btnSiri.do{
+            let intent = NearbyParkIntent()
+            intent.suggestedInvocationPhrase = "Bike Park"
+            $0.shortcut = INShortcut(intent: intent)
+            INInteraction(intent: intent, response: nil).donate{ _ in }
+            $0.delegate = self
         }
         
         table.register(nib: BikeParkCell.self)
@@ -89,7 +101,7 @@ class BikeParkVC: BaseVC {
                     PulleyViewController(
                         contentViewController: ParkLocationVC(park: $0, vm: self.vm),
                         drawerViewController: ParkDetailInfoVC(park: $0, vm: self.vm)
-                    )
+                        )
                         .then{ $0.drawerTopInset = 0 }
                 }
                 ~> rx.navigate
@@ -103,6 +115,60 @@ class BikeParkVC: BaseVC {
             ~ bag
     }
     
+}
+
+extension BikeParkVC: INUIAddVoiceShortcutButtonDelegate {
     
+    func present(_ addVoiceShortcutViewController: INUIAddVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        addVoiceShortcutViewController.do{
+            $0.delegate = self
+            $0.modalPresentationStyle = .formSheet
+        }
+        present(addVoiceShortcutViewController, animated: true)
+    }
     
+    func present(_ editVoiceShortcutViewController: INUIEditVoiceShortcutViewController, for addVoiceShortcutButton: INUIAddVoiceShortcutButton) {
+        editVoiceShortcutViewController.do{
+            $0.delegate = self
+            $0.modalPresentationStyle = .formSheet
+        }
+        present(editVoiceShortcutViewController, animated: true)
+    }
+}
+
+extension BikeParkVC: INUIAddVoiceShortcutViewControllerDelegate {
+    
+    func showAddedSiriAlert(_ command: String?) {
+        let alert = UIAlertController(title: "附近YouBike停車場", message: "Siri 指令： \(command ?? "")", preferredStyle: .alert)
+        alert.addAction(.init(title: "OK", style: .cancel) { [weak self] _ in
+            self?.manager.requestWhenInUseAuthorization()
+            })
+        present(alert, animated: true)
+    }
+    
+    func addVoiceShortcutViewController(_ controller: INUIAddVoiceShortcutViewController, didFinishWith voiceShortcut: INVoiceShortcut?, error: Error?) {
+        controller.dismiss(animated: true) { [weak self] in
+            self?.showAddedSiriAlert(voiceShortcut?.invocationPhrase)
+        }
+    }
+    
+    func addVoiceShortcutViewControllerDidCancel(_ controller: INUIAddVoiceShortcutViewController) {
+        controller.dismiss(animated: true)
+    }
+}
+
+extension BikeParkVC: INUIEditVoiceShortcutViewControllerDelegate {
+    func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController, didUpdate voiceShortcut: INVoiceShortcut?, error: Error?) {
+        controller.dismiss(animated: true){ [weak self] in
+            self?.showAddedSiriAlert(voiceShortcut?.invocationPhrase)
+        }
+    }
+    
+    func editVoiceShortcutViewController(_ controller: INUIEditVoiceShortcutViewController, didDeleteVoiceShortcutWithIdentifier deletedVoiceShortcutIdentifier: UUID) {
+        controller.dismiss(animated: true)
+    }
+    
+    func editVoiceShortcutViewControllerDidCancel(_ controller: INUIEditVoiceShortcutViewController) {
+        controller.dismiss(animated: true)
+    }
 }

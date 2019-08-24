@@ -7,30 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C67F08F2310DAA700C12B51 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F08E2310DAA700C12B51 /* IntentHandler.swift */; };
-		9C67F0972310DAA700C12B51 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0962310DAA700C12B51 /* IntentsUI.framework */; };
-		9C67F09A2310DAA700C12B51 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0992310DAA700C12B51 /* IntentViewController.swift */; };
-		9C67F09D2310DAA700C12B51 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C67F09B2310DAA700C12B51 /* MainInterface.storyboard */; };
-		9C67F0A12310DAA700C12B51 /* NearbyUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C67F0952310DAA700C12B51 /* NearbyUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9C67F0A42310DAA700C12B51 /* Nearby.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C67F08C2310DAA700C12B51 /* Nearby.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6AFB659DBF1F11FCAF2DC0A1 /* Pods_NearbyUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4324212506711053636979B3 /* Pods_NearbyUI.framework */; };
+		7B0F9219154F3395964FB16C /* Pods_Nearby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0B7802C8B737F0649857BC1 /* Pods_Nearby.framework */; };
+		9C443F132311202000C747E4 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C443F122311202000C747E4 /* IntentHandler.swift */; };
+		9C443F1A2311202100C747E4 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0962310DAA700C12B51 /* IntentsUI.framework */; };
+		9C443F1D2311202100C747E4 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C443F1C2311202100C747E4 /* IntentViewController.swift */; };
+		9C443F202311202100C747E4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C443F1E2311202100C747E4 /* MainInterface.storyboard */; };
+		9C443F242311202100C747E4 /* NearbyUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C443F192311202100C747E4 /* NearbyUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C443F272311202100C747E4 /* Nearby.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C443F102311202000C747E4 /* Nearby.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C443F2E2311203700C747E4 /* YouBikeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */; };
+		9C443F2F2311203C00C747E4 /* YouBikeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */; };
+		9C443F302311204300C747E4 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
+		9C443F312311204400C747E4 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
+		9C443F32231120E500C747E4 /* INBikePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F11E23110C0700C12B51 /* INBikePark.swift */; };
+		9C443F33231120E600C747E4 /* INBikePark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F11E23110C0700C12B51 /* INBikePark.swift */; };
 		9C67F0D32310DC3000C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
-		9C67F0D42310DCDE00C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
-		9C67F0D52310DCDE00C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
+		9C67F0E02310DDDE00C12B51 /* YouBikeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C67F0DE2310DDDE00C12B51 /* YouBikeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C67F0E32310DDDE00C12B51 /* YouBikeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */; };
+		9C67F0E42310DDDE00C12B51 /* YouBikeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9C67F0E92310DDF100C12B51 /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1922F9CB440055848C /* LocationResponse.swift */; };
+		9C67F0EA2310DDF300C12B51 /* BikeLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */; };
+		9C67F0EB2310DDF600C12B51 /* MoyaX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1622F9CA1B0055848C /* MoyaX.swift */; };
+		9C67F0F22310E2B100C12B51 /* UIX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7D22F9D5B200647BC5 /* UIX.swift */; };
+		9C67F0F32310E2B300C12B51 /* CommonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7F22F9D62700647BC5 /* CommonX.swift */; };
+		9C67F0F42310E2B800C12B51 /* SequenceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8122FAFA7D00647BC5 /* SequenceX.swift */; };
+		9C67F0F52310E2BA00C12B51 /* CoreX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8A22FB057B00647BC5 /* CoreX.swift */; };
+		9C67F0F72310E2C900C12B51 /* StringError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0F62310E2C900C12B51 /* StringError.swift */; };
 		9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D0E22F9BF4E0055848C /* RxStatus.swift */; };
 		9C787D1222F9C4FF0055848C /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1122F9C4FF0055848C /* BaseVC.swift */; };
-		9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */; };
-		9C787D1722F9CA1B0055848C /* MoyaX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1622F9CA1B0055848C /* MoyaX.swift */; };
-		9C787D1A22F9CB440055848C /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1922F9CB440055848C /* LocationResponse.swift */; };
 		9C787D1C22F9CE0A0055848C /* BikeParkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1B22F9CE0A0055848C /* BikeParkVM.swift */; };
 		9C787D2122F9D43C0055848C /* BikeParkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1F22F9D43C0055848C /* BikeParkVC.swift */; };
 		9C787D2222F9D43C0055848C /* BikeParkVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C787D2022F9D43C0055848C /* BikeParkVC.xib */; };
-		9CC9DB7E22F9D5B200647BC5 /* UIX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7D22F9D5B200647BC5 /* UIX.swift */; };
-		9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB7F22F9D62700647BC5 /* CommonX.swift */; };
-		9CC9DB8222FAFA7D00647BC5 /* SequenceX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8122FAFA7D00647BC5 /* SequenceX.swift */; };
 		9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8322FAFD7A00647BC5 /* BikeParkCell.swift */; };
 		9CC9DB8622FAFD7A00647BC5 /* BikeParkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8422FAFD7A00647BC5 /* BikeParkCell.xib */; };
 		9CC9DB8922FAFE8C00647BC5 /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8822FAFE8C00647BC5 /* BaseCell.swift */; };
-		9CC9DB8B22FB057B00647BC5 /* CoreX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8A22FB057B00647BC5 /* CoreX.swift */; };
 		9CC9DB8D22FB093000647BC5 /* BaseNC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8C22FB093000647BC5 /* BaseNC.swift */; };
 		9CC9DB8F22FB102A00647BC5 /* BaseTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB8E22FB102A00647BC5 /* BaseTable.swift */; };
 		9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC9DB9022FB16E000647BC5 /* ParkBookmarkVM.swift */; };
@@ -46,22 +56,30 @@
 		9CF36ACA22FDB65B00FE2F21 /* BikeParkPadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF36AC822FDB65B00FE2F21 /* BikeParkPadVC.swift */; };
 		9CF36ACB22FDB65B00FE2F21 /* BikeParkPadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CF36AC922FDB65B00FE2F21 /* BikeParkPadVC.xib */; };
 		A10CBD2901402D82BE74E800 /* Pods_YouBike.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */; };
+		FB8AF644C7C0FC0070223671 /* Pods_YouBikeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F37384D92BA5F90B3F5E94C /* Pods_YouBikeKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9C67F09F2310DAA700C12B51 /* PBXContainerItemProxy */ = {
+		9C443F222311202100C747E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CECFB7422F850A2001C87E7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9C67F0942310DAA700C12B51;
+			remoteGlobalIDString = 9C443F182311202100C747E4;
 			remoteInfo = NearbyUI;
 		};
-		9C67F0A22310DAA700C12B51 /* PBXContainerItemProxy */ = {
+		9C443F252311202100C747E4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CECFB7422F850A2001C87E7 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9C67F08B2310DAA700C12B51;
+			remoteGlobalIDString = 9C443F0F2311202000C747E4;
 			remoteInfo = Nearby;
+		};
+		9C67F0E12310DDDE00C12B51 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9CECFB7422F850A2001C87E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C67F0DB2310DDDE00C12B51;
+			remoteInfo = YouBikeKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -72,27 +90,47 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				9C67F0A42310DAA700C12B51 /* Nearby.appex in Embed App Extensions */,
-				9C67F0A12310DAA700C12B51 /* NearbyUI.appex in Embed App Extensions */,
+				9C443F242311202100C747E4 /* NearbyUI.appex in Embed App Extensions */,
+				9C443F272311202100C747E4 /* Nearby.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C67F0E82310DDDE00C12B51 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9C67F0E42310DDDE00C12B51 /* YouBikeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4324212506711053636979B3 /* Pods_NearbyUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NearbyUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DC14C6E1B472BDCB369B585 /* Pods-YouBikeKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBikeKit.debug.xcconfig"; path = "Target Support Files/Pods-YouBikeKit/Pods-YouBikeKit.debug.xcconfig"; sourceTree = "<group>"; };
+		744420C9C28AD5A9060262E9 /* Pods-Nearby.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearby.release.xcconfig"; path = "Target Support Files/Pods-Nearby/Pods-Nearby.release.xcconfig"; sourceTree = "<group>"; };
 		75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.release.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.release.xcconfig"; sourceTree = "<group>"; };
+		8F37384D92BA5F90B3F5E94C /* Pods_YouBikeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouBikeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C443F102311202000C747E4 /* Nearby.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Nearby.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C443F122311202000C747E4 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		9C443F142311202000C747E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C443F192311202100C747E4 /* NearbyUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NearbyUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C443F1C2311202100C747E4 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		9C443F1F2311202100C747E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9C443F212311202100C747E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C67F08723104DAE00C12B51 /* YouBike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouBike.entitlements; sourceTree = "<group>"; };
-		9C67F08C2310DAA700C12B51 /* Nearby.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Nearby.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C67F08E2310DAA700C12B51 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
-		9C67F0902310DAA700C12B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9C67F0952310DAA700C12B51 /* NearbyUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NearbyUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67F0962310DAA700C12B51 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
-		9C67F0992310DAA700C12B51 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
-		9C67F09C2310DAA700C12B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
-		9C67F09E2310DAA700C12B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Nearby.intentdefinition; sourceTree = "<group>"; };
+		9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YouBikeKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C67F0DE2310DDDE00C12B51 /* YouBikeKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YouBikeKit.h; sourceTree = "<group>"; };
+		9C67F0DF2310DDDE00C12B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C67F0F62310E2C900C12B51 /* StringError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringError.swift; sourceTree = "<group>"; };
+		9C67F11E23110C0700C12B51 /* INBikePark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = INBikePark.swift; sourceTree = "<group>"; };
 		9C787D0E22F9BF4E0055848C /* RxStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxStatus.swift; sourceTree = "<group>"; };
 		9C787D1122F9C4FF0055848C /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeLocationAPI.swift; sourceTree = "<group>"; };
@@ -124,22 +162,39 @@
 		9CECFB9B22F87BD3001C87E7 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		9CF36AC822FDB65B00FE2F21 /* BikeParkPadVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeParkPadVC.swift; sourceTree = "<group>"; };
 		9CF36AC922FDB65B00FE2F21 /* BikeParkPadVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BikeParkPadVC.xib; sourceTree = "<group>"; };
+		9EB37BA460522487834763D0 /* Pods-NearbyUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyUI.release.xcconfig"; path = "Target Support Files/Pods-NearbyUI/Pods-NearbyUI.release.xcconfig"; sourceTree = "<group>"; };
+		BB20946A211AD22301FDC12B /* Pods-NearbyUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NearbyUI.debug.xcconfig"; path = "Target Support Files/Pods-NearbyUI/Pods-NearbyUI.debug.xcconfig"; sourceTree = "<group>"; };
 		C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.debug.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.debug.xcconfig"; sourceTree = "<group>"; };
+		F0B7802C8B737F0649857BC1 /* Pods_Nearby.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nearby.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9D460BAFFEE8D0D9AC89A2F /* Pods-Nearby.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearby.debug.xcconfig"; path = "Target Support Files/Pods-Nearby/Pods-Nearby.debug.xcconfig"; sourceTree = "<group>"; };
+		FD03278CBAA31CD00480652C /* Pods-YouBikeKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBikeKit.release.xcconfig"; path = "Target Support Files/Pods-YouBikeKit/Pods-YouBikeKit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C67F0892310DAA700C12B51 /* Frameworks */ = {
+		9C443F0D2311202000C747E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C443F2E2311203700C747E4 /* YouBikeKit.framework in Frameworks */,
+				7B0F9219154F3395964FB16C /* Pods_Nearby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C67F0922310DAA700C12B51 /* Frameworks */ = {
+		9C443F162311202100C747E4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C67F0972310DAA700C12B51 /* IntentsUI.framework in Frameworks */,
+				9C443F2F2311203C00C747E4 /* YouBikeKit.framework in Frameworks */,
+				9C443F1A2311202100C747E4 /* IntentsUI.framework in Frameworks */,
+				6AFB659DBF1F11FCAF2DC0A1 /* Pods_NearbyUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C67F0D92310DDDE00C12B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8AF644C7C0FC0070223671 /* Pods_YouBikeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +202,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C67F0E32310DDDE00C12B51 /* YouBikeKit.framework in Frameworks */,
 				A10CBD2901402D82BE74E800 /* Pods_YouBike.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,35 +215,58 @@
 			children = (
 				1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */,
 				9C67F0962310DAA700C12B51 /* IntentsUI.framework */,
+				8F37384D92BA5F90B3F5E94C /* Pods_YouBikeKit.framework */,
+				F0B7802C8B737F0649857BC1 /* Pods_Nearby.framework */,
+				4324212506711053636979B3 /* Pods_NearbyUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9C67F08D2310DAA700C12B51 /* Nearby */ = {
+		9C443F112311202000C747E4 /* Nearby */ = {
 			isa = PBXGroup;
 			children = (
-				9C67F08E2310DAA700C12B51 /* IntentHandler.swift */,
-				9C67F0902310DAA700C12B51 /* Info.plist */,
+				9C443F122311202000C747E4 /* IntentHandler.swift */,
+				9C443F142311202000C747E4 /* Info.plist */,
 			);
 			path = Nearby;
 			sourceTree = "<group>";
 		};
-		9C67F0982310DAA700C12B51 /* NearbyUI */ = {
+		9C443F1B2311202100C747E4 /* NearbyUI */ = {
 			isa = PBXGroup;
 			children = (
-				9C67F0992310DAA700C12B51 /* IntentViewController.swift */,
-				9C67F09B2310DAA700C12B51 /* MainInterface.storyboard */,
-				9C67F09E2310DAA700C12B51 /* Info.plist */,
+				9C443F1C2311202100C747E4 /* IntentViewController.swift */,
+				9C443F1E2311202100C747E4 /* MainInterface.storyboard */,
+				9C443F212311202100C747E4 /* Info.plist */,
 			);
 			path = NearbyUI;
 			sourceTree = "<group>";
 		};
-		9C67F0D12310DC1200C12B51 /* Siri Shortcut */ = {
+		9C67F0D12310DC1200C12B51 /* YouBike Siri */ = {
 			isa = PBXGroup;
 			children = (
+				9C67F11D23110BD800C12B51 /* Model */,
 				9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */,
 			);
-			path = "Siri Shortcut";
+			path = "YouBike Siri";
+			sourceTree = "<group>";
+		};
+		9C67F0DD2310DDDE00C12B51 /* YouBikeKit */ = {
+			isa = PBXGroup;
+			children = (
+				9C787D1822F9CB330055848C /* Model */,
+				9C787D1322F9C8C60055848C /* API */,
+				9C67F0DE2310DDDE00C12B51 /* YouBikeKit.h */,
+				9C67F0DF2310DDDE00C12B51 /* Info.plist */,
+			);
+			path = YouBikeKit;
+			sourceTree = "<group>";
+		};
+		9C67F11D23110BD800C12B51 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C67F11E23110C0700C12B51 /* INBikePark.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9C787D1022F9C4F60055848C /* View */ = {
@@ -214,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				9C787D1922F9CB440055848C /* LocationResponse.swift */,
+				9C67F0F62310E2C900C12B51 /* StringError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,9 +346,11 @@
 		9CECFB7322F850A2001C87E7 = {
 			isa = PBXGroup;
 			children = (
+				9C67F0D12310DC1200C12B51 /* YouBike Siri */,
+				9C67F0DD2310DDDE00C12B51 /* YouBikeKit */,
 				9CECFB7E22F850A2001C87E7 /* YouBike */,
-				9C67F08D2310DAA700C12B51 /* Nearby */,
-				9C67F0982310DAA700C12B51 /* NearbyUI */,
+				9C443F112311202000C747E4 /* Nearby */,
+				9C443F1B2311202100C747E4 /* NearbyUI */,
 				9CECFB7D22F850A2001C87E7 /* Products */,
 				EE57E302A06324679EC459CF /* Pods */,
 				90EDF852F20FE47FA0BCFC86 /* Frameworks */,
@@ -279,8 +361,9 @@
 			isa = PBXGroup;
 			children = (
 				9CECFB7C22F850A2001C87E7 /* YouBike.app */,
-				9C67F08C2310DAA700C12B51 /* Nearby.appex */,
-				9C67F0952310DAA700C12B51 /* NearbyUI.appex */,
+				9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */,
+				9C443F102311202000C747E4 /* Nearby.appex */,
+				9C443F192311202100C747E4 /* NearbyUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -288,11 +371,8 @@
 		9CECFB7E22F850A2001C87E7 /* YouBike */ = {
 			isa = PBXGroup;
 			children = (
-				9C67F0D12310DC1200C12B51 /* Siri Shortcut */,
-				9C67F08723104DAE00C12B51 /* YouBike.entitlements */,
 				9CC9DB7C22F9D5A700647BC5 /* Extension */,
-				9C787D1822F9CB330055848C /* Model */,
-				9C787D1322F9C8C60055848C /* API */,
+				9C67F08723104DAE00C12B51 /* YouBike.entitlements */,
 				9C787D1022F9C4F60055848C /* View */,
 				9CECFB9A22F87BC6001C87E7 /* ViewModel */,
 				9CECFB7F22F850A2001C87E7 /* AppDelegate.swift */,
@@ -320,20 +400,38 @@
 			children = (
 				C703A7DEC9F29B48D2D1BF98 /* Pods-YouBike.debug.xcconfig */,
 				75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */,
+				6DC14C6E1B472BDCB369B585 /* Pods-YouBikeKit.debug.xcconfig */,
+				FD03278CBAA31CD00480652C /* Pods-YouBikeKit.release.xcconfig */,
+				F9D460BAFFEE8D0D9AC89A2F /* Pods-Nearby.debug.xcconfig */,
+				744420C9C28AD5A9060262E9 /* Pods-Nearby.release.xcconfig */,
+				BB20946A211AD22301FDC12B /* Pods-NearbyUI.debug.xcconfig */,
+				9EB37BA460522487834763D0 /* Pods-NearbyUI.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		9C67F0D72310DDDE00C12B51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C67F0E02310DDDE00C12B51 /* YouBikeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		9C67F08B2310DAA700C12B51 /* Nearby */ = {
+		9C443F0F2311202000C747E4 /* Nearby */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C67F0A82310DAA700C12B51 /* Build configuration list for PBXNativeTarget "Nearby" */;
+			buildConfigurationList = 9C443F2B2311202100C747E4 /* Build configuration list for PBXNativeTarget "Nearby" */;
 			buildPhases = (
-				9C67F0882310DAA700C12B51 /* Sources */,
-				9C67F0892310DAA700C12B51 /* Frameworks */,
-				9C67F08A2310DAA700C12B51 /* Resources */,
+				4CC62E44E4139E306FFF3B7C /* [CP] Check Pods Manifest.lock */,
+				9C443F0C2311202000C747E4 /* Sources */,
+				9C443F0D2311202000C747E4 /* Frameworks */,
+				9C443F0E2311202000C747E4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -341,16 +439,17 @@
 			);
 			name = Nearby;
 			productName = Nearby;
-			productReference = 9C67F08C2310DAA700C12B51 /* Nearby.appex */;
+			productReference = 9C443F102311202000C747E4 /* Nearby.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		9C67F0942310DAA700C12B51 /* NearbyUI */ = {
+		9C443F182311202100C747E4 /* NearbyUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C67F0A52310DAA700C12B51 /* Build configuration list for PBXNativeTarget "NearbyUI" */;
+			buildConfigurationList = 9C443F282311202100C747E4 /* Build configuration list for PBXNativeTarget "NearbyUI" */;
 			buildPhases = (
-				9C67F0912310DAA700C12B51 /* Sources */,
-				9C67F0922310DAA700C12B51 /* Frameworks */,
-				9C67F0932310DAA700C12B51 /* Resources */,
+				B8DBA2C6E050CD21961C44E9 /* [CP] Check Pods Manifest.lock */,
+				9C443F152311202100C747E4 /* Sources */,
+				9C443F162311202100C747E4 /* Frameworks */,
+				9C443F172311202100C747E4 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -358,8 +457,27 @@
 			);
 			name = NearbyUI;
 			productName = NearbyUI;
-			productReference = 9C67F0952310DAA700C12B51 /* NearbyUI.appex */;
+			productReference = 9C443F192311202100C747E4 /* NearbyUI.appex */;
 			productType = "com.apple.product-type.app-extension";
+		};
+		9C67F0DB2310DDDE00C12B51 /* YouBikeKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C67F0E52310DDDE00C12B51 /* Build configuration list for PBXNativeTarget "YouBikeKit" */;
+			buildPhases = (
+				EF11123754E3F31F0151E93F /* [CP] Check Pods Manifest.lock */,
+				9C67F0D72310DDDE00C12B51 /* Headers */,
+				9C67F0D82310DDDE00C12B51 /* Sources */,
+				9C67F0D92310DDDE00C12B51 /* Frameworks */,
+				9C67F0DA2310DDDE00C12B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YouBikeKit;
+			productName = YouBikeKit;
+			productReference = 9C67F0DC2310DDDE00C12B51 /* YouBikeKit.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 		9CECFB7B22F850A2001C87E7 /* YouBike */ = {
 			isa = PBXNativeTarget;
@@ -371,12 +489,14 @@
 				9CECFB7A22F850A2001C87E7 /* Resources */,
 				65B2FBA77B79AF14B7FFFCCA /* [CP] Embed Pods Frameworks */,
 				9C67F08623104CA300C12B51 /* Embed App Extensions */,
+				9C67F0E82310DDDE00C12B51 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9C67F0A02310DAA700C12B51 /* PBXTargetDependency */,
-				9C67F0A32310DAA700C12B51 /* PBXTargetDependency */,
+				9C67F0E22310DDDE00C12B51 /* PBXTargetDependency */,
+				9C443F232311202100C747E4 /* PBXTargetDependency */,
+				9C443F262311202100C747E4 /* PBXTargetDependency */,
 			);
 			name = YouBike;
 			productName = YouBike;
@@ -393,10 +513,13 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ricky Lau";
 				TargetAttributes = {
-					9C67F08B2310DAA700C12B51 = {
+					9C443F0F2311202000C747E4 = {
 						CreatedOnToolsVersion = 10.3;
 					};
-					9C67F0942310DAA700C12B51 = {
+					9C443F182311202100C747E4 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					9C67F0DB2310DDDE00C12B51 = {
 						CreatedOnToolsVersion = 10.3;
 					};
 					9CECFB7B22F850A2001C87E7 = {
@@ -423,25 +546,33 @@
 			projectRoot = "";
 			targets = (
 				9CECFB7B22F850A2001C87E7 /* YouBike */,
-				9C67F08B2310DAA700C12B51 /* Nearby */,
-				9C67F0942310DAA700C12B51 /* NearbyUI */,
+				9C67F0DB2310DDDE00C12B51 /* YouBikeKit */,
+				9C443F0F2311202000C747E4 /* Nearby */,
+				9C443F182311202100C747E4 /* NearbyUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C67F08A2310DAA700C12B51 /* Resources */ = {
+		9C443F0E2311202000C747E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C67F0932310DAA700C12B51 /* Resources */ = {
+		9C443F172311202100C747E4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C67F09D2310DAA700C12B51 /* MainInterface.storyboard in Resources */,
+				9C443F202311202100C747E4 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C67F0DA2310DDDE00C12B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +593,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4CC62E44E4139E306FFF3B7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nearby-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		65B2FBA77B79AF14B7FFFCCA /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -501,24 +654,81 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B8DBA2C6E050CD21961C44E9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NearbyUI-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF11123754E3F31F0151E93F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YouBikeKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C67F0882310DAA700C12B51 /* Sources */ = {
+		9C443F0C2311202000C747E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C67F08F2310DAA700C12B51 /* IntentHandler.swift in Sources */,
-				9C67F0D42310DCDE00C12B51 /* Nearby.intentdefinition in Sources */,
+				9C443F32231120E500C747E4 /* INBikePark.swift in Sources */,
+				9C443F132311202000C747E4 /* IntentHandler.swift in Sources */,
+				9C443F302311204300C747E4 /* Nearby.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C67F0912310DAA700C12B51 /* Sources */ = {
+		9C443F152311202100C747E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C67F09A2310DAA700C12B51 /* IntentViewController.swift in Sources */,
-				9C67F0D52310DCDE00C12B51 /* Nearby.intentdefinition in Sources */,
+				9C443F33231120E600C747E4 /* INBikePark.swift in Sources */,
+				9C443F1D2311202100C747E4 /* IntentViewController.swift in Sources */,
+				9C443F312311204400C747E4 /* Nearby.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C67F0D82310DDDE00C12B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C67F0EA2310DDF300C12B51 /* BikeLocationAPI.swift in Sources */,
+				9C67F0F72310E2C900C12B51 /* StringError.swift in Sources */,
+				9C67F0E92310DDF100C12B51 /* LocationResponse.swift in Sources */,
+				9C67F0EB2310DDF600C12B51 /* MoyaX.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,28 +736,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CC9DB7E22F9D5B200647BC5 /* UIX.swift in Sources */,
 				9C787D2122F9D43C0055848C /* BikeParkVC.swift in Sources */,
 				9CEAA8AF22FB23D7004EF7CA /* TabBarVC.swift in Sources */,
 				9CC9DB8F22FB102A00647BC5 /* BaseTable.swift in Sources */,
+				9C67F0F52310E2BA00C12B51 /* CoreX.swift in Sources */,
 				9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */,
 				9C67F0D32310DC3000C12B51 /* Nearby.intentdefinition in Sources */,
 				9CC9DB8D22FB093000647BC5 /* BaseNC.swift in Sources */,
-				9CC9DB8B22FB057B00647BC5 /* CoreX.swift in Sources */,
-				9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */,
 				9CC9DB8922FAFE8C00647BC5 /* BaseCell.swift in Sources */,
-				9C787D1A22F9CB440055848C /* LocationResponse.swift in Sources */,
 				9CEAA8B322FC5890004EF7CA /* ParkLocationVC.swift in Sources */,
+				9C67F0F42310E2B800C12B51 /* SequenceX.swift in Sources */,
 				9CECFB9C22F87BD3001C87E7 /* ViewModel.swift in Sources */,
 				9CC9DB9122FB16E000647BC5 /* ParkBookmarkVM.swift in Sources */,
 				9CC9DB8522FAFD7A00647BC5 /* BikeParkCell.swift in Sources */,
-				9C787D1722F9CA1B0055848C /* MoyaX.swift in Sources */,
 				9CF36ACA22FDB65B00FE2F21 /* BikeParkPadVC.swift in Sources */,
-				9CC9DB8222FAFA7D00647BC5 /* SequenceX.swift in Sources */,
-				9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */,
 				9CC9DB9322FB173200647BC5 /* UDKey.swift in Sources */,
+				9C67F0F32310E2B300C12B51 /* CommonX.swift in Sources */,
 				9CECFB8022F850A2001C87E7 /* AppDelegate.swift in Sources */,
 				9C787D1C22F9CE0A0055848C /* BikeParkVM.swift in Sources */,
+				9C67F0F22310E2B100C12B51 /* UIX.swift in Sources */,
 				9C787D1222F9C4FF0055848C /* BaseVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -555,23 +762,28 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C67F0A02310DAA700C12B51 /* PBXTargetDependency */ = {
+		9C443F232311202100C747E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C67F0942310DAA700C12B51 /* NearbyUI */;
-			targetProxy = 9C67F09F2310DAA700C12B51 /* PBXContainerItemProxy */;
+			target = 9C443F182311202100C747E4 /* NearbyUI */;
+			targetProxy = 9C443F222311202100C747E4 /* PBXContainerItemProxy */;
 		};
-		9C67F0A32310DAA700C12B51 /* PBXTargetDependency */ = {
+		9C443F262311202100C747E4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C67F08B2310DAA700C12B51 /* Nearby */;
-			targetProxy = 9C67F0A22310DAA700C12B51 /* PBXContainerItemProxy */;
+			target = 9C443F0F2311202000C747E4 /* Nearby */;
+			targetProxy = 9C443F252311202100C747E4 /* PBXContainerItemProxy */;
+		};
+		9C67F0E22310DDDE00C12B51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C67F0DB2310DDDE00C12B51 /* YouBikeKit */;
+			targetProxy = 9C67F0E12310DDDE00C12B51 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C67F09B2310DAA700C12B51 /* MainInterface.storyboard */ = {
+		9C443F1E2311202100C747E4 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				9C67F09C2310DAA700C12B51 /* Base */,
+				9C443F1F2311202100C747E4 /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
@@ -595,13 +807,14 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9C67F0A62310DAA700C12B51 /* Debug */ = {
+		9C443F292311202100C747E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB20946A211AD22301FDC12B /* Pods-NearbyUI.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = NearbyUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -615,13 +828,14 @@
 			};
 			name = Debug;
 		};
-		9C67F0A72310DAA700C12B51 /* Release */ = {
+		9C443F2A2311202100C747E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB37BA460522487834763D0 /* Pods-NearbyUI.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = NearbyUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -635,13 +849,14 @@
 			};
 			name = Release;
 		};
-		9C67F0A92310DAA700C12B51 /* Debug */ = {
+		9C443F2C2311202100C747E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F9D460BAFFEE8D0D9AC89A2F /* Pods-Nearby.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = Nearby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -655,13 +870,14 @@
 			};
 			name = Debug;
 		};
-		9C67F0AA2310DAA700C12B51 /* Release */ = {
+		9C443F2D2311202100C747E4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744420C9C28AD5A9060262E9 /* Pods-Nearby.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = Nearby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -672,6 +888,66 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9C67F0E62310DDDE00C12B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC14C6E1B472BDCB369B585 /* Pods-YouBikeKit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YouBikeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricky.lau.YouBikeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9C67F0E72310DDDE00C12B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD03278CBAA31CD00480652C /* Pods-YouBikeKit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = YouBikeKit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricky.lau.YouBikeKit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -803,6 +1079,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = YouBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -824,6 +1101,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
 				INFOPLIST_FILE = YouBike/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -838,20 +1116,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C67F0A52310DAA700C12B51 /* Build configuration list for PBXNativeTarget "NearbyUI" */ = {
+		9C443F282311202100C747E4 /* Build configuration list for PBXNativeTarget "NearbyUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C67F0A62310DAA700C12B51 /* Debug */,
-				9C67F0A72310DAA700C12B51 /* Release */,
+				9C443F292311202100C747E4 /* Debug */,
+				9C443F2A2311202100C747E4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C67F0A82310DAA700C12B51 /* Build configuration list for PBXNativeTarget "Nearby" */ = {
+		9C443F2B2311202100C747E4 /* Build configuration list for PBXNativeTarget "Nearby" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C67F0A92310DAA700C12B51 /* Debug */,
-				9C67F0AA2310DAA700C12B51 /* Release */,
+				9C443F2C2311202100C747E4 /* Debug */,
+				9C443F2D2311202100C747E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C67F0E52310DDDE00C12B51 /* Build configuration list for PBXNativeTarget "YouBikeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C67F0E62310DDDE00C12B51 /* Debug */,
+				9C67F0E72310DDDE00C12B51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
