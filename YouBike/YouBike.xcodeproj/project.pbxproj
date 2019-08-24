@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C67F08223104CA300C12B51 /* Nearyby.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C67F07B23104CA300C12B51 /* Nearyby.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C67F08F2310DAA700C12B51 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F08E2310DAA700C12B51 /* IntentHandler.swift */; };
 		9C67F0972310DAA700C12B51 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C67F0962310DAA700C12B51 /* IntentsUI.framework */; };
 		9C67F09A2310DAA700C12B51 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0992310DAA700C12B51 /* IntentViewController.swift */; };
 		9C67F09D2310DAA700C12B51 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C67F09B2310DAA700C12B51 /* MainInterface.storyboard */; };
 		9C67F0A12310DAA700C12B51 /* NearbyUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C67F0952310DAA700C12B51 /* NearbyUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9C67F0A42310DAA700C12B51 /* Nearby.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C67F08C2310DAA700C12B51 /* Nearby.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		9C67F0D32310DC3000C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
+		9C67F0D42310DCDE00C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
+		9C67F0D52310DCDE00C12B51 /* Nearby.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */; };
 		9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D0E22F9BF4E0055848C /* RxStatus.swift */; };
 		9C787D1222F9C4FF0055848C /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1122F9C4FF0055848C /* BaseVC.swift */; };
 		9C787D1522F9C8D00055848C /* BikeLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */; };
@@ -47,13 +49,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9C67F08023104CA300C12B51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CECFB7422F850A2001C87E7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C67F07A23104CA300C12B51;
-			remoteInfo = Nearyby;
-		};
 		9C67F09F2310DAA700C12B51 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CECFB7422F850A2001C87E7 /* Project object */;
@@ -78,7 +73,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				9C67F0A42310DAA700C12B51 /* Nearby.appex in Embed App Extensions */,
-				9C67F08223104CA300C12B51 /* Nearyby.appex in Embed App Extensions */,
 				9C67F0A12310DAA700C12B51 /* NearbyUI.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -89,7 +83,6 @@
 /* Begin PBXFileReference section */
 		1AEC7A1947E6B76306BE067D /* Pods_YouBike.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YouBike.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C18D0983316A921329C30F /* Pods-YouBike.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouBike.release.xcconfig"; path = "Target Support Files/Pods-YouBike/Pods-YouBike.release.xcconfig"; sourceTree = "<group>"; };
-		9C67F07B23104CA300C12B51 /* Nearyby.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Nearyby.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67F08723104DAE00C12B51 /* YouBike.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YouBike.entitlements; sourceTree = "<group>"; };
 		9C67F08C2310DAA700C12B51 /* Nearby.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Nearby.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C67F08E2310DAA700C12B51 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -99,6 +92,7 @@
 		9C67F0992310DAA700C12B51 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
 		9C67F09C2310DAA700C12B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		9C67F09E2310DAA700C12B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Nearby.intentdefinition; sourceTree = "<group>"; };
 		9C787D0E22F9BF4E0055848C /* RxStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxStatus.swift; sourceTree = "<group>"; };
 		9C787D1122F9C4FF0055848C /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		9C787D1422F9C8D00055848C /* BikeLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BikeLocationAPI.swift; sourceTree = "<group>"; };
@@ -134,13 +128,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C67F07823104CA300C12B51 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C67F0892310DAA700C12B51 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -193,6 +180,14 @@
 				9C67F09E2310DAA700C12B51 /* Info.plist */,
 			);
 			path = NearbyUI;
+			sourceTree = "<group>";
+		};
+		9C67F0D12310DC1200C12B51 /* Siri Shortcut */ = {
+			isa = PBXGroup;
+			children = (
+				9C67F0D22310DC3000C12B51 /* Nearby.intentdefinition */,
+			);
+			path = "Siri Shortcut";
 			sourceTree = "<group>";
 		};
 		9C787D1022F9C4F60055848C /* View */ = {
@@ -284,7 +279,6 @@
 			isa = PBXGroup;
 			children = (
 				9CECFB7C22F850A2001C87E7 /* YouBike.app */,
-				9C67F07B23104CA300C12B51 /* Nearyby.appex */,
 				9C67F08C2310DAA700C12B51 /* Nearby.appex */,
 				9C67F0952310DAA700C12B51 /* NearbyUI.appex */,
 			);
@@ -294,6 +288,7 @@
 		9CECFB7E22F850A2001C87E7 /* YouBike */ = {
 			isa = PBXGroup;
 			children = (
+				9C67F0D12310DC1200C12B51 /* Siri Shortcut */,
 				9C67F08723104DAE00C12B51 /* YouBike.entitlements */,
 				9CC9DB7C22F9D5A700647BC5 /* Extension */,
 				9C787D1822F9CB330055848C /* Model */,
@@ -332,23 +327,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C67F07A23104CA300C12B51 /* Nearyby */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C67F08523104CA300C12B51 /* Build configuration list for PBXNativeTarget "Nearyby" */;
-			buildPhases = (
-				9C67F07723104CA300C12B51 /* Sources */,
-				9C67F07823104CA300C12B51 /* Frameworks */,
-				9C67F07923104CA300C12B51 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Nearyby;
-			productName = Nearyby;
-			productReference = 9C67F07B23104CA300C12B51 /* Nearyby.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		9C67F08B2310DAA700C12B51 /* Nearby */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9C67F0A82310DAA700C12B51 /* Build configuration list for PBXNativeTarget "Nearby" */;
@@ -397,7 +375,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				9C67F08123104CA300C12B51 /* PBXTargetDependency */,
 				9C67F0A02310DAA700C12B51 /* PBXTargetDependency */,
 				9C67F0A32310DAA700C12B51 /* PBXTargetDependency */,
 			);
@@ -416,9 +393,6 @@
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Ricky Lau";
 				TargetAttributes = {
-					9C67F07A23104CA300C12B51 = {
-						CreatedOnToolsVersion = 10.3;
-					};
 					9C67F08B2310DAA700C12B51 = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -449,7 +423,6 @@
 			projectRoot = "";
 			targets = (
 				9CECFB7B22F850A2001C87E7 /* YouBike */,
-				9C67F07A23104CA300C12B51 /* Nearyby */,
 				9C67F08B2310DAA700C12B51 /* Nearby */,
 				9C67F0942310DAA700C12B51 /* NearbyUI */,
 			);
@@ -457,13 +430,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9C67F07923104CA300C12B51 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C67F08A2310DAA700C12B51 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,18 +504,12 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C67F07723104CA300C12B51 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C67F0882310DAA700C12B51 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9C67F08F2310DAA700C12B51 /* IntentHandler.swift in Sources */,
+				9C67F0D42310DCDE00C12B51 /* Nearby.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -558,6 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C67F09A2310DAA700C12B51 /* IntentViewController.swift in Sources */,
+				9C67F0D52310DCDE00C12B51 /* Nearby.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +531,7 @@
 				9CEAA8AF22FB23D7004EF7CA /* TabBarVC.swift in Sources */,
 				9CC9DB8F22FB102A00647BC5 /* BaseTable.swift in Sources */,
 				9C787D0F22F9BF4E0055848C /* RxStatus.swift in Sources */,
+				9C67F0D32310DC3000C12B51 /* Nearby.intentdefinition in Sources */,
 				9CC9DB8D22FB093000647BC5 /* BaseNC.swift in Sources */,
 				9CC9DB8B22FB057B00647BC5 /* CoreX.swift in Sources */,
 				9CC9DB8022F9D62700647BC5 /* CommonX.swift in Sources */,
@@ -593,11 +555,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C67F08123104CA300C12B51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C67F07A23104CA300C12B51 /* Nearyby */;
-			targetProxy = 9C67F08023104CA300C12B51 /* PBXContainerItemProxy */;
-		};
 		9C67F0A02310DAA700C12B51 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9C67F0942310DAA700C12B51 /* NearbyUI */;
@@ -638,46 +595,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9C67F08323104CA300C12B51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
-				INFOPLIST_FILE = Nearyby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.movie6.riclau.YouBike.Nearby;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9C67F08423104CA300C12B51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5NAXYRN6Q2;
-				INFOPLIST_FILE = Nearyby/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.movie6.riclau.YouBike.Nearby;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		9C67F0A62310DAA700C12B51 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -921,15 +838,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C67F08523104CA300C12B51 /* Build configuration list for PBXNativeTarget "Nearyby" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C67F08323104CA300C12B51 /* Debug */,
-				9C67F08423104CA300C12B51 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		9C67F0A52310DAA700C12B51 /* Build configuration list for PBXNativeTarget "NearbyUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
