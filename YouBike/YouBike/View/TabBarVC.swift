@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 struct TabController {
     let vc: UIViewController
@@ -19,6 +20,10 @@ class TabBarVC: UITabBarController {
         super.viewDidLoad()
         
         let parkVM: ViewModel<BikeParkVM> = .init(.init())
+        
+        INPreferences.requestSiriAuthorization { status in
+            print("@# Status: \(status.rawValue)")
+        }
         
         let iPad = UIDevice.current.userInterfaceIdiom == .pad
         
